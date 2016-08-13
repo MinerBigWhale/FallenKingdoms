@@ -1,0 +1,1298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Project Files" />
+  </component>
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="FkPlugin:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="38a88045-025c-461e-8696-5e63723cddc7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/projectiles/ProjectileSource.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/projectiles/ProjectileSource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/messaging/PluginMessageListener.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/messaging/PluginMessageListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/BanList.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/BanList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/material/types/MushroomBlockTexture.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/material/types/MushroomBlockTexture.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/map/MapView.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/map/MapView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/test/java/org/bukkit/metadata/MetadataValueAdapterTest.java" afterPath="$PROJECT_DIR$/../bukkit/src/test/java/org/bukkit/metadata/MetadataValueAdapterTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/scoreboard/DisplaySlot.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/scoreboard/DisplaySlot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/scheduler/BukkitScheduler.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/scheduler/BukkitScheduler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Pig.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Pig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Warning.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Warning.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/NoteBlock.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/NoteBlock.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/OfflinePlayer.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/OfflinePlayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/inventory/PlayerInventory.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/inventory/PlayerInventory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/util/BlockIterator.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/util/BlockIterator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/entity/EntityUnleashEvent.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/entity/EntityUnleashEvent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/ThrownPotion.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/ThrownPotion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/Dispenser.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/Dispenser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Art.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Art.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/Dropper.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/Dropper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Creature.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Creature.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/material/Colorable.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/material/Colorable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/permissions/PermissionRemovedExecutor.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/permissions/PermissionRemovedExecutor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/CreatureSpawner.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/CreatureSpawner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/scoreboard/NameTagVisibility.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/scoreboard/NameTagVisibility.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/permissions/Permissible.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/permissions/Permissible.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Arrow.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Arrow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Instrument.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Instrument.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/Furnace.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/Furnace.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/HumanEntity.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/HumanEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/Skull.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/Skull.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Player.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Skeleton.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Skeleton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/test/java/org/bukkit/ChatColorTest.java" afterPath="$PROJECT_DIR$/../bukkit/src/test/java/org/bukkit/ChatColorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/PluginLoader.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/PluginLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/material/Redstone.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/material/Redstone.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/TabCommandExecutor.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/TabCommandExecutor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/ServicesManager.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/ServicesManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Ocelot.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Ocelot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/messaging/Messenger.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/messaging/Messenger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/CropState.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/CropState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/map/MapCursor.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/map/MapCursor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/metadata/Metadatable.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/metadata/Metadatable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/GrassSpecies.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/GrassSpecies.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Creeper.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Creeper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/Event.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/Event.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Enderman.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Enderman.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/TabCompleter.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/TabCompleter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/scheduler/BukkitWorker.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/scheduler/BukkitWorker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/map/MinecraftFont.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/map/MinecraftFont.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/Sign.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/Sign.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/generator/ChunkGenerator.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/generator/ChunkGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/defaults/TellCommand.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/defaults/TellCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/scheduler/BukkitTask.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/scheduler/BukkitTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/ComplexLivingEntity.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/ComplexLivingEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/BrewingStand.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/BrewingStand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/World.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/World.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Tameable.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Tameable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/TravelAgent.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/TravelAgent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/defaults/EffectCommand.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/defaults/EffectCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Painting.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Painting.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/configuration/file/FileConfiguration.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/configuration/file/FileConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/enchantments/Enchantment.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/enchantments/Enchantment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/material/Mushroom.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/material/Mushroom.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/ChatColor.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/ChatColor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/conversations/Conversable.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/conversations/Conversable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/CommandMap.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/CommandMap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/test/java/org/bukkit/ColorTest.java" afterPath="$PROJECT_DIR$/../bukkit/src/test/java/org/bukkit/ColorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/NetherWartsState.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/NetherWartsState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/Jukebox.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/Jukebox.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/inventory/ItemFlag.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/inventory/ItemFlag.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/DyeColor.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/DyeColor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/map/MapCanvas.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/map/MapCanvas.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/PortalType.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/PortalType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Guardian.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Guardian.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/TreeSpecies.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/TreeSpecies.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/CommandExecutor.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/CommandExecutor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/LivingEntity.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/LivingEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/BanEntry.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/BanEntry.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/ExperienceOrb.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/ExperienceOrb.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/potion/PotionType.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/potion/PotionType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/PluginManager.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/PluginManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Entity.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Entity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/help/HelpTopicFactory.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/help/HelpTopicFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/player/PlayerTeleportEvent.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/player/PlayerTeleportEvent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/entity/EntityTargetEvent.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/entity/EntityTargetEvent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/defaults/HelpCommand.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/defaults/HelpCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Material.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Material.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/inventory/meta/BookMeta.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/inventory/meta/BookMeta.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Server.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Server.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/EntityType.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/EntityType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/permissions/PermissionDefault.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/permissions/PermissionDefault.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Item.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Item.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/minecart/CommandMinecart.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/minecart/CommandMinecart.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Hanging.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Hanging.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/PluginIdentifiableCommand.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/PluginIdentifiableCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/ItemFrame.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/ItemFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/scoreboard/Team.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/scoreboard/Team.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/SimpleServicesManager.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/SimpleServicesManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/LightningStrike.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/LightningStrike.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/configuration/serialization/SerializableAs.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/configuration/serialization/SerializableAs.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Sound.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Sound.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/configuration/serialization/ConfigurationSerialization.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/configuration/serialization/ConfigurationSerialization.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/configuration/serialization/ConfigurationSerializable.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/configuration/serialization/ConfigurationSerializable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Sheep.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Sheep.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Projectile.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Projectile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/inventory/InventoryType.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/inventory/InventoryType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/material/Attachable.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/material/Attachable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/potion/PotionEffectType.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/potion/PotionEffectType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/GameMode.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/GameMode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/material/PressureSensor.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/material/PressureSensor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/projectiles/BlockProjectileSource.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/projectiles/BlockProjectileSource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/util/io/BukkitObjectInputStream.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/util/io/BukkitObjectInputStream.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/test/java/org/bukkit/util/StringUtilStartsWithTest.java" afterPath="$PROJECT_DIR$/../bukkit/src/test/java/org/bukkit/util/StringUtilStartsWithTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Zombie.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Zombie.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/test/java/org/bukkit/TestServer.java" afterPath="$PROJECT_DIR$/../bukkit/src/test/java/org/bukkit/TestServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Color.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Color.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/metadata/MetadataStore.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/metadata/MetadataStore.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Villager.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Villager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/messaging/PluginMessageRecipient.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/messaging/PluginMessageRecipient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/BlockChangeDelegate.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/BlockChangeDelegate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/test/java/org/bukkit/LocationTest.java" afterPath="$PROJECT_DIR$/../bukkit/src/test/java/org/bukkit/LocationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Minecart.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Minecart.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/WorldBorder.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/WorldBorder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Achievement.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Achievement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/EnderDragonPart.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/EnderDragonPart.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/conversations/ConversationAbandonedListener.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/conversations/ConversationAbandonedListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Bukkit.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Bukkit.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/CommandSender.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/CommandSender.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Wolf.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Wolf.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/EventPriority.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/EventPriority.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Horse.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Horse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Difficulty.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Difficulty.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Ageable.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Ageable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/material/Directional.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/material/Directional.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/PluginAwareness.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/PluginAwareness.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Slime.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Slime.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/material/Wood.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/material/Wood.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Statistic.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Statistic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/BlockCommandSender.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/command/BlockCommandSender.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/Cancellable.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/Cancellable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/attribute/AttributeModifier.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/attribute/AttributeModifier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/SkullType.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/SkullType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/inventory/ItemStack.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/inventory/ItemStack.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/test/java/org/bukkit/plugin/messaging/TestPlayer.java" afterPath="$PROJECT_DIR$/../bukkit/src/test/java/org/bukkit/plugin/messaging/TestPlayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/BlockState.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/BlockState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/ComplexEntityPart.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/ComplexEntityPart.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/EventExecutor.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/EventExecutor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/inventory/Inventory.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/inventory/Inventory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/AnimalTamer.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/AnimalTamer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/potion/PotionBrewer.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/potion/PotionBrewer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/entity/PotionSplashEvent.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/entity/PotionSplashEvent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/inventory/InventoryHolder.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/inventory/InventoryHolder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/AreaEffectCloud.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/AreaEffectCloud.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/configuration/Configuration.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/configuration/Configuration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/IronGolem.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/IronGolem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/CommandBlock.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/CommandBlock.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/FishHook.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/FishHook.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/SandstoneType.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/SandstoneType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/test/java/org/bukkit/util/io/BukkitObjectStreamTest.java" afterPath="$PROJECT_DIR$/../bukkit/src/test/java/org/bukkit/util/io/BukkitObjectStreamTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/BlockFace.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/BlockFace.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/inventory/InventoryView.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/inventory/InventoryView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/CoalType.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/CoalType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/WorldType.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/WorldType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/WitherSkull.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/WitherSkull.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/TNTPrimed.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/TNTPrimed.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Boat.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Boat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/configuration/ConfigurationSection.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/configuration/ConfigurationSection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/help/HelpMap.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/help/HelpMap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Note.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Note.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Location.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Location.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Fireball.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Fireball.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/attribute/Attribute.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/attribute/Attribute.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/conversations/ConversationCanceller.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/conversations/ConversationCanceller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/player/PlayerResourcePackStatusEvent.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/event/player/PlayerResourcePackStatusEvent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/configuration/serialization/DelegateDeserialization.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/configuration/serialization/DelegateDeserialization.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/metadata/MetadataValue.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/metadata/MetadataValue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/conversations/Prompt.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/conversations/Prompt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/PistonMoveReaction.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/PistonMoveReaction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/permissions/ServerOperator.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/permissions/ServerOperator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Vehicle.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Vehicle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/PluginDescriptionFile.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/PluginDescriptionFile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Explosive.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Explosive.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/messaging/PluginMessageListenerRegistration.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/messaging/PluginMessageListenerRegistration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/Plugin.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/plugin/Plugin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Rabbit.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/entity/Rabbit.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/banner/PatternType.java" afterPath="$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/block/banner/PatternType.java" />
+    </list>
+    <ignored path="FkPlugin2.0.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/bin/" />
+    <ignored path="$PROJECT_DIR$/../bukkit/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="hideWarnings" value="true" />
+    <option name="HIDE_WARNINGS" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="FkPlugin2.0" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/be/miner/data/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="67" column="77" selection-start-line="67" selection-start-column="77" selection-end-line="67" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Timer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/be/miner/data/Timer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2890">
+              <caret line="182" column="54" selection-start-line="182" selection-start-column="54" selection-end-line="182" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#6514#6515#0" expanded="true" />
+                <element signature="e#6548#6549#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/be/miner/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Base.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/be/miner/data/Base.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="106" column="56" selection-start-line="106" selection-start-column="56" selection-end-line="106" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChatEvent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/be/miner/events/ChatEvent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="22" column="119" selection-start-line="22" selection-start-column="119" selection-end-line="22" selection-end-column="119" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FkCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/be/miner/commands/FkCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1122">
+              <caret line="79" column="36" selection-start-line="79" selection-start-column="36" selection-end-line="80" selection-end-column="127" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomBoard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/be/miner/utils/CustomBoard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1003">
+              <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+              <folding>
+                <element signature="e#349#350#0" expanded="true" />
+                <element signature="e#373#374#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JoinEvent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/be/miner/events/JoinEvent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="40" column="75" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../bukkit" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/fr/thibault/plugin/data/Base.java" />
+        <option value="$PROJECT_DIR$/src/fr/thibault/plugin/utils/Timer.java" />
+        <option value="$PROJECT_DIR$/src/fr/thibault/plugin/events/BlockPlaceControl.java" />
+        <option value="$PROJECT_DIR$/src/fr/thibault/plugin/events/BlockBreakControl.java" />
+        <option value="$PROJECT_DIR$/src/fr/thibault/plugin/data/Timer.java" />
+        <option value="$PROJECT_DIR$/src/fr/thibault/plugin/events/JoinEvent.java" />
+        <option value="$PROJECT_DIR$/src/fr/thibault/plugin/data/Game.java" />
+        <option value="$PROJECT_DIR$/blocklist.yml" />
+        <option value="$PROJECT_DIR$/src/fr/thibault/plugin/Main.java" />
+        <option value="$PROJECT_DIR$/src/fr/thibault/plugin/commands/FkCommand.java" />
+        <option value="$PROJECT_DIR$/src/fr/thibault/plugin/events/BlockControl.java" />
+        <option value="$PROJECT_DIR$/src/fr/thibault/plugin/menu/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/FallenKingdom/events/ChatEvent.java" />
+        <option value="$PROJECT_DIR$/src/FallenKingdom/data/Player.java" />
+        <option value="$PROJECT_DIR$/src/FallenKingdom/events/DamageEvent.java" />
+        <option value="$PROJECT_DIR$/src/FallenKingdom/events/QuitEvent.java" />
+        <option value="$PROJECT_DIR$/src/FallenKingdom/events/MainMenuEvent.java" />
+        <option value="$PROJECT_DIR$/src/FallenKingdom/menu/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/FallenKingdom/events/BlockControl.java" />
+        <option value="$PROJECT_DIR$/src/FallenKingdom/events/PauseEvents.java" />
+        <option value="$PROJECT_DIR$/src/FallenKingdom/events/JoinEvent.java" />
+        <option value="$PROJECT_DIR$/config.yml" />
+        <option value="$PROJECT_DIR$/src/FallenKingdom/data/Timer.java" />
+        <option value="$PROJECT_DIR$/src/FallenKingdom/utils/Math.java" />
+        <option value="$PROJECT_DIR$/src/FallenKingdom/data/Base.java" />
+        <option value="$PROJECT_DIR$/src/FallenKingdom/utils/ScoreBoard.java" />
+        <option value="$PROJECT_DIR$/src/FallenKingdom/Main.java" />
+        <option value="$PROJECT_DIR$/src/FallenKingdom/commands/FkCommand.java" />
+        <option value="$PROJECT_DIR$/FkPlugin2.0.iml" />
+        <option value="$PROJECT_DIR$/.project" />
+        <option value="$PROJECT_DIR$/plugin.yml" />
+        <option value="$PROJECT_DIR$/src/be/miner/events/BlockControl.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/utils/PluginFile.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/utils/IconMenu.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/menu/IconMenuEvents.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/menu/IconMenu.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/menu/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/events/DirectionEvent.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/events/MoveEvent.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/events/BlockEvent.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/events/MenuEvent.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/commands/FkCommand.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/data/Game.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/utils/ScoreBoard.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/events/JoinEvent.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/utils/CustomBoard.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/Main.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/events/ChatEvent.java" />
+        <option value="$PROJECT_DIR$/src/config.yml" />
+        <option value="$PROJECT_DIR$/src/be/miner/data/Timer.java" />
+        <option value="$PROJECT_DIR$/src/be/miner/data/Base.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Declaration redundancyJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>WeakerAccess</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FkPlugin2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FkPlugin2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FKPlugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FkPlugin2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FKPlugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FkPlugin2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FKPlugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="miner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FkPlugin2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FKPlugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="miner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FkPlugin2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FKPlugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="miner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FkPlugin2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FKPlugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="miner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FkPlugin2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FKPlugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="miner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FkPlugin2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FKPlugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="miner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commands" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Spigot/BuildTools/Bukkit/target/bukkit-1.10.2-R0.1-SNAPSHOT.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="fkplugin2.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Robert\IdeaProjects\FKPlugin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Robert\IdeaProjects\FKPlugin\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="FkPlugin2.0" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38a88045-025c-461e-8696-5e63723cddc7" name="Default" comment="" />
+      <created>1467471046508</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1467471046508</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5051414" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904884" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14652957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24935733" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270525" sideWeight="0.49485862" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.60834455" sideWeight="0.49485862" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66890985" sideWeight="0.49485862" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270525" sideWeight="0.49485862" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5051414" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904884" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.60834455" sideWeight="0.49485862" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14717224" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66890985" sideWeight="0.49485862" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24935733" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/fr/thibault/plugin/events/QuitEvent.java</url>
+          <line>14</line>
+          <properties field="data" class="fr.thibault.plugin.events.QuitEvent" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../bukkit/src/main/java/org/bukkit/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="267" column="6" selection-start-line="266" selection-start-column="70" selection-end-line="267" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/lang/Runnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="66" column="7" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../bukkit/target/classes/org/bukkit/block/Block.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/util/function/Predicate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/thibault/plugin/events/PNJ_Event.java" />
+    <entry file="file://$PROJECT_DIR$/lang.yml" />
+    <entry file="file://$PROJECT_DIR$/src/fr/thibault/plugin/commands/Methode.java" />
+    <entry file="file://$PROJECT_DIR$/src/fr/thibault/plugin/events/EventManager.java" />
+    <entry file="file://$PROJECT_DIR$/../bukkit/target/classes/org/bukkit/plugin/java/JavaPlugin.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="135" column="51" selection-start-line="135" selection-start-column="51" selection-end-line="135" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../bukkit/target/classes/org/bukkit/configuration/file/FileConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/thibault/plugin/events/BlockPlaceControl.java" />
+    <entry file="file://$PROJECT_DIR$/src/FallenKingdom/data/Player.java" />
+    <entry file="file://$PROJECT_DIR$/../bukkit/target/classes/org/bukkit/configuration/MemorySection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="282" column="0" selection-start-line="282" selection-start-column="0" selection-end-line="282" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FallenKingdom/events/MainMenuEvent.java" />
+    <entry file="file://$PROJECT_DIR$/src/FallenKingdom/events/PauseEvents.java" />
+    <entry file="file://$PROJECT_DIR$/src/FallenKingdom/events/PseudoEvent.java" />
+    <entry file="file://$PROJECT_DIR$/src/FallenKingdom/events/QuitEvent.java" />
+    <entry file="file://$PROJECT_DIR$/src/FallenKingdom/events/ZoneMessage.java" />
+    <entry file="file://$PROJECT_DIR$/../bukkit/src/main/javadoc/overview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath" />
+    <entry file="file://$PROJECT_DIR$/FkPlugin.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/FkPlugin_jar.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blocklist.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t" />
+    <entry file="file://$PROJECT_DIR$/src/be/miner/utils/Prefix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Documents/Spigot/BuildTools/spigot-1.10.2.jar!/org/bukkit/configuration/file/FileConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Documents/Spigot/BuildTools/spigot-1.10.2.jar!/org/bukkit/configuration/file/YamlConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/miner/utils/PluginFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/miner/menu/IconMenuEvents.java" />
+    <entry file="file://$PROJECT_DIR$/src/be/miner/gui/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="22" column="87" selection-start-line="22" selection-start-column="87" selection-end-line="22" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/miner/gui/IconMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/miner/utils/Math.java" />
+    <entry file="file://$PROJECT_DIR$/src/be/miner/events/BlockEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/miner/events/MenuEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/miner/events/DamageEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/miner/events/MoveEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Documents/Spigot/BuildTools/spigot-1.10.2.jar!/org/bukkit/ChatColor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/miner/data/ChestRoom.java" />
+    <entry file="jar://$USER_HOME$/Documents/Spigot/BuildTools/spigot-1.10.2.jar!/org/bukkit/Server.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="67" column="44" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Documents/Spigot/BuildTools/spigot-1.10.2.jar!/org/bukkit/Bukkit.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="91" column="41" selection-start-line="91" selection-start-column="41" selection-end-line="91" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/miner/commands/FkCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="79" column="36" selection-start-line="79" selection-start-column="36" selection-end-line="80" selection-end-column="127" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/miner/events/JoinEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="40" column="75" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/miner/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/miner/events/ChatEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="119" selection-start-line="22" selection-start-column="119" selection-end-line="22" selection-end-column="119" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/miner/utils/CustomBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+          <folding>
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/miner/data/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="67" column="77" selection-start-line="67" selection-start-column="77" selection-end-line="67" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/miner/data/Timer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2890">
+          <caret line="182" column="54" selection-start-line="182" selection-start-column="54" selection-end-line="182" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6514#6515#0" expanded="true" />
+            <element signature="e#6548#6549#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/miner/data/Base.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="106" column="56" selection-start-line="106" selection-start-column="56" selection-end-line="106" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>FkPlugin:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>FkPlugin</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.google.code.gson:gson:2.2.4</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
