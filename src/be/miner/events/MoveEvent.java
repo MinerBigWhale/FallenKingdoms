@@ -16,11 +16,11 @@ public class MoveEvent implements Listener {
     @EventHandler
     public void onMove(PlayerMoveEvent e) {
         Player player = e.getPlayer();
-
         if (Game.isPaused()){
             e.setCancelled(true);
             player.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Vous ne pouvez pas bouger pendant la pause !");
             return;
         }
+        Timer.UpdateScoreBoard(player);
     }
 }

@@ -155,30 +155,30 @@ public class Base {
 
     public String getDirectionString(Player player) {
 
-        if (getDistance(player) <= 3){ return "❂";}
+        if (getDistance(player) <= _size / 2){ return "⭘";}
         Location plocation = player.getLocation();
         Location blocation = new Location(_world,_x,_y,_z);
 
         double angle = calculAngle(blocation, plocation);
 
         if (angle <= 22.5 || angle > 337.5) {
-            return "⬇";
+            return "⇩";
         } else if (angle > 22.5 && angle <= 67.5) {
-            return "⬋";
+            return "⬃";
         } else if (angle > 67.5 && angle <= 112.5) {
-            return "⬅";
+            return "⇦";
         } else if (angle > 112.5 && angle <= 157.5) {
-            return "⬉";
+            return "⬁";
         } else if (angle > 157.5 && angle <= 202.5) {
-            return "⬆";
+            return "⇧";
         } else if (angle > 202.5 && angle <= 247.5) {
-            return "⬈";
+            return "⬀";
         } else if (angle > 247.5 && angle <= 292.5) {
-            return "⟶";
+            return "⇨";
         } else if (angle > 292.5 && angle <= 337.5) {
-            return "⬊";
+            return "⬂";
         } else{
-            return "⭘";//"❂";
+            return "⤬";//"❂";
         }
     }
 

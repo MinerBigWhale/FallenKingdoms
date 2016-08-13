@@ -66,7 +66,6 @@ public class Timer {
     public static void startFk(Plugin pl) {
         stopTimer();
         checkPlayerDistribution();
-        _scoreboard = new CustomBoard();
         _taskIdStart = Bukkit.getScheduler().scheduleSyncRepeatingTask(pl, () -> {
             _startTimer -= 1;
             Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.YELLOW + "La partie commence dans " + ChatColor.WHITE + (_startTimer + 1) + ChatColor.YELLOW + " seconde(s) !");
@@ -118,13 +117,12 @@ public class Timer {
                 }
             }
             //Update scoreboard with new info
-            _scoreboard.update();
+            UpdateScoreBoard();
         }, 0L, 20L);
     }
 
     public static void stopFk(Plugin pl) {
         stopTimer();
-        _scoreboard.close();
         Bukkit.broadcastMessage(ChatColor.DARK_GREEN + "===  Fin de la partie  ===");
         Game.stop();
         if (Main.getConfigFile().getBoolean("stopServer")) {
@@ -142,6 +140,19 @@ public class Timer {
         }
     }
 
+    public static void UpdateScoreBoard(Player player){
+        if (_scoreboard == null ) {
+            _scoreboard = new CustomBoard();
+        }
+        _scoreboard.update(player);
+    }
+    public static void UpdateScoreBoard(){
+        if (_scoreboard == null ) {
+            _scoreboard = new CustomBoard();
+        }
+        _scoreboard.update();
+    }
+
     protected static void stopTimer() {
         Bukkit.getScheduler().cancelTask(taskId);
         //reset variables
@@ -155,41 +166,61 @@ public class Timer {
         _toAssault=Main.getConfigFile().getInt("AssaultDay")*60*20;
     }
 
-    public static CustomBoard getScoreboard(){
-        return _scoreboard;
-    }
-
     public static void checkPlayerDistribution() {
         Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GREEN + "Répartition des joueurs sans équipe");
         //Distribute undecided players
-        HashMap<String, Player> players = new HashMap<String, Player>();
-        for (Player player: Bukkit.getOnlinePlayers()) {
-            players.put(player.getName(), player);
-        }
-        players.forEach((name, player) -> {
-            for (Base base : Game.getBases()){
-                if (base.hasPlayer(player)) {
-                    players.remove(name);
+
+        try {
+            HashMap<String, Player> players = new HashMap<String, Player>();
+            for (Player player: Bukkit.getOnlinePlayers()) {
+                players.put(player.getName(), player);
+                Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + player.getName() + "is online");
+            }
+
+            players.forEach((name, player) -> {
+                for (Base base : Game.getBases()) {
+                    if (base.hasPlayer(player)) {
+                        players.remove(name);
+                        Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + name + "has already a team");
+                    }
                 }
+            });
+
+            players.forEach((name, player) -> {
+                Base poorbase = null;
+                for (Base base : Game.getBases()) {
+                    if (poorbase == null || base.getPlayers().size() < poorbase.getPlayers().size()) {
+                        poorbase = base;
+                    }
+                }
+                poorbase.addPlayer(player);
+            });
+        } catch (Exception e) {Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + "No player without team");}
+
+            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GREEN + "Equilibrage des équipes");
+            //equilibrate base load
+            HashMap<String, Player> players = new HashMap<String, Player>();
+            for (Player player: Bukkit.getOnlinePlayers()) {
+                players.put(player.getName(), player);
+                Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + player.getName() + "is online");
             }
-        });
-        players.forEach((name, player) -> {
-            Base poorbase = null;
-            for (Base base : Game.getBases()) {
-                if (poorbase == null || base.getPlayers().size() < poorbase.getPlayers().size()) { poorbase = base; }
-            }
-            poorbase.addPlayer(player);
-        });
-        Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GREEN + "Equilibrage des équipes");
-        //equilibrate base load
-        players.forEach((name, player) -> {
-            Base poorbase = null;
-            Base richbase = null;
-            for (Base base : Game.getBases()) {
-                if (poorbase == null || base.getPlayers().size() < poorbase.getPlayers().size()) { poorbase = base; }
-                if (richbase == null || base.getPlayers().size() > richbase.getPlayers().size()) { richbase = base; }
-            }
-            if(richbase.getPlayers().size() - poorbase.getPlayers().size() > 1) { poorbase.addPlayer(player); }
-        });
+
+            players.forEach((name, player) -> {
+                Base poorbase = null;
+                Base richbase = null;
+                for (Base base : Game.getBases()) {
+                    if (poorbase == null || base.getPlayers().size() < poorbase.getPlayers().size()) {
+                        poorbase = base;
+                    }
+                    if (richbase == null || base.getPlayers().size() > richbase.getPlayers().size()) {
+                        richbase = base;
+                    }
+                }
+                if (richbase.getPlayers().size() - poorbase.getPlayers().size() > 1) {
+                    poorbase.addPlayer(player);
+                }
+            });
+        try {
+        } catch (Exception e) {Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + "No needs to balance teams");}
     }
 }

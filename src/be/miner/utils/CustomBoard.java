@@ -26,10 +26,10 @@ public class CustomBoard {
         //prepare building Scoreboard
         String[] strings = new String[15];
         strings[0] = ChatColor.GOLD + "====" + Main.getConfigFile().getString("ScoreBoardName") + "  " + ChatColor.GRAY + Timer.getTotalTime() + ChatColor.GOLD + "====";
-        int index = 1;
+        int index = 0;
 
         index++; strings[index] = ChatColor.GRAY + "--- Bases --- ";
-        index++; strings[index] = ChatColor.YELLOW + "Equipes en jeux: " + ChatColor.AQUA + Game.getBases().size();
+        index++; strings[index] = ChatColor.YELLOW + "Equipes: " + ChatColor.AQUA + Game.getBases().size();
         for (Base base : Game.getBases()){
             index++; strings[index] = ChatColor.GRAY + "- " + base.getNameString() + ": "+ ChatColor.AQUA + base.getPlayers().size();
         }
@@ -50,15 +50,17 @@ public class CustomBoard {
             scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
         }
         Objective objective = scoreboard.getObjective(DisplaySlot.SIDEBAR);
-        if(objective!=null){
+        try {
+            objective.setDisplaySlot(null);
             objective.unregister();
-        }
-        objective = scoreboard.registerNewObjective(("FK" + player.getName() + "00000000000000").substring(0, 16), "dummy");
-        objective.setDisplaySlot(DisplaySlot.SIDEBAR);
+        } catch (Exception e) {}
 
-        objective.setDisplayName(strings[0]);
+        String objectivename = ("FK" + player.getName() + "00000000000000").substring(0, 16);
+        objective = scoreboard.registerNewObjective(objectivename, "dummy");
+        objective = scoreboard.getObjective(objectivename);
+
         if (Game.isRunning()) {
-            for (int scorepos = -2; scorepos >= 0 - index; scorepos--) {
+            for (int scorepos = -1; scorepos >= 0 - index; scorepos--) {
                 objective.getScore(strings[-scorepos]).setScore(scorepos);
             }
         } else {
@@ -68,7 +70,9 @@ public class CustomBoard {
                 }
             }
         }
-        player.setScoreboard(scoreboard);
+
+        objective.setDisplayName(strings[0]);
+        objective.setDisplaySlot(DisplaySlot.SIDEBAR);
     }
 
     public void close(){ for (Player player : Bukkit.getOnlinePlayers()) close(player); }
