@@ -21,6 +21,6 @@ public class MoveEvent implements Listener {
             player.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Vous ne pouvez pas bouger pendant la pause !");
             return;
         }
-        Timer.UpdateScoreBoard(player);
+        Timer.getScoreBoard().updateInfoValue(player).update(player);
     }
 }

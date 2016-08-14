@@ -12,36 +12,79 @@ import org.bukkit.scoreboard.*;
 
 import java.lang.*;
 import java.lang.Math;
+import java.util.HashMap;
 
 public class CustomBoard {
 
+    private String[] strings = new String[15];
+    private String[] _baseStrings;
+    private String[] _timeStrings;
+    private HashMap<String, String[]> _infoStrings = new HashMap<String, String[]>();
 
     public CustomBoard() {
+        updateBaseValue();
+        updateTimeValue();
+        updateInfoValue();
         update();
+    }
+
+    public CustomBoard updateBaseValue() {
+        _baseStrings = new String[2 + Game.getBases().size()];
+        int index = 0;
+
+        _baseStrings[index] = ChatColor.GRAY + "--- Bases --- "; index++;
+        _baseStrings[index] = ChatColor.YELLOW + "Equipes: " + ChatColor.AQUA + Game.getBases().size(); index++;
+        for (Base base : Game.getBases()){
+            _baseStrings[index] = ChatColor.GRAY + "- " + base.getNameString() + ": "+ ChatColor.AQUA + base.getPlayers().size(); index++;
+        }
+        return this;
+    }
+
+    public CustomBoard updateTimeValue() {
+        _timeStrings = new String[3];
+        int index = 0;
+
+        strings[0] = ChatColor.GOLD + "====" + Main.getConfigFile().getString("ScoreBoardName") + "  " + ChatColor.GRAY + Timer.getTotalTime() + ChatColor.GOLD + "====";
+
+        _timeStrings[index] = ChatColor.GRAY + "--- Timer --- "; index++;
+        _timeStrings[index] = ChatColor.YELLOW + "PvP: " + ChatColor.AQUA + Timer.getToPvpTime(); index++;
+        _timeStrings[index] = ChatColor.YELLOW + "Assault: " + ChatColor.AQUA + Timer.getToAssaultTime(); index++;
+        return this;
+    }
+
+    public CustomBoard updateInfoValue() { for (Player player : Bukkit.getOnlinePlayers()) updateInfoValue(player); return this; }
+    public CustomBoard updateInfoValue(Player player) {
+        String[] infoString = new String[3];
+        int index = 0;
+
+        infoString[index] = ChatColor.GRAY + "--- Infos --- "; index++;
+        for (Base base : Game.getBases()){
+            if (base.hasPlayer(player)){
+                infoString[index] = ChatColor.YELLOW + "Equipe: " + base.getNameString(); index++;
+                infoString[index] = ChatColor.YELLOW + "Base: " + ChatColor.GOLD + base.getDirectionString(player) +" "+ ChatColor.YELLOW + Math.round(base.getDistance(player)) + "m"; index++;
+            }
+        }
+        _infoStrings.put(player.getName(),infoString);
+        return this;
     }
 
     public void update(){ for (Player player : Bukkit.getOnlinePlayers()) update(player); }
     public void update(Player player){
 
         //prepare building Scoreboard
-        String[] strings = new String[15];
-        strings[0] = ChatColor.GOLD + "====" + Main.getConfigFile().getString("ScoreBoardName") + "  " + ChatColor.GRAY + Timer.getTotalTime() + ChatColor.GOLD + "====";
         int index = 0;
 
-        index++; strings[index] = ChatColor.GRAY + "--- Bases --- ";
-        index++; strings[index] = ChatColor.YELLOW + "Equipes: " + ChatColor.AQUA + Game.getBases().size();
-        for (Base base : Game.getBases()){
-            index++; strings[index] = ChatColor.GRAY + "- " + base.getNameString() + ": "+ ChatColor.AQUA + base.getPlayers().size();
+        for(int xedni = 0; xedni < _baseStrings.length; xedni++) {
+            index++;
+            strings[index] = _baseStrings[xedni];
         }
-        index++; strings[index] = ChatColor.GRAY + "--- Timer --- ";
-        index++; strings[index] = ChatColor.YELLOW + "PvP: " + ChatColor.AQUA + Timer.getToPvpTime();
-        index++; strings[index] = ChatColor.YELLOW + "Assault: " + ChatColor.AQUA + Timer.getToAssaultTime();
-        index++; strings[index] = ChatColor.GRAY + "--- Infos --- ";
-        for (Base base : Game.getBases()){
-            if (base.hasPlayer(player)){
-                index++; strings[index] = ChatColor.YELLOW + "Equipe: " + base.getNameString();
-                index++; strings[index] = ChatColor.YELLOW + "Base: " + ChatColor.GOLD + base.getDirectionString(player) +" "+ ChatColor.YELLOW + Math.round(base.getDistance(player)) + "m";
-            }
+        for(int xedni = 0; xedni < _timeStrings.length; xedni++) {
+            index++;
+            strings[index] = _timeStrings[xedni];
+        }
+        for(int xedni = 0; xedni < _infoStrings.get(player.getName()).length; xedni++) {
+            index++;
+            strings[index] = _infoStrings.get(player.getName())[xedni];
         }
 
         //creating and affect Scoreboard

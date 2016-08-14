@@ -117,7 +117,7 @@ public class Timer {
                 }
             }
             //Update scoreboard with new info
-            UpdateScoreBoard();
+            getScoreBoard().updateTimeValue().update();
         }, 0L, 20L);
     }
 
@@ -140,17 +140,11 @@ public class Timer {
         }
     }
 
-    public static void UpdateScoreBoard(Player player){
+    public static CustomBoard getScoreBoard(){
         if (_scoreboard == null ) {
             _scoreboard = new CustomBoard();
         }
-        _scoreboard.update(player);
-    }
-    public static void UpdateScoreBoard(){
-        if (_scoreboard == null ) {
-            _scoreboard = new CustomBoard();
-        }
-        _scoreboard.update();
+        return _scoreboard;
     }
 
     protected static void stopTimer() {
@@ -164,6 +158,11 @@ public class Timer {
         _totalSecond = 0;
         _toPvp = Main.getConfigFile().getInt("pvpDay")*60*20;
         _toAssault=Main.getConfigFile().getInt("AssaultDay")*60*20;
+
+        getScoreBoard().updateTimeValue();
+        getScoreBoard().updateInfoValue();
+        getScoreBoard().updateBaseValue();
+        getScoreBoard().update();
     }
 
     public static void checkPlayerDistribution() {

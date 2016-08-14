@@ -1,5 +1,6 @@
 package be.miner.events;
 
+import be.miner.data.Timer;
 import be.miner.gui.MainMenu;
 import be.miner.Main;
 import be.miner.data.Base;
@@ -12,6 +13,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerJoinEvent;
 
+import java.sql.Time;
 import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -22,6 +24,7 @@ public class JoinEvent implements org.bukkit.event.Listener {
 
     @EventHandler
     public void playerJoinEvent(PlayerJoinEvent e) {
+        Timer.getScoreBoard().updateBaseValue().update();
         Player player = e.getPlayer();
         for(Base base : Game.getBases()) {
             if (base.hasPlayer(player)){
