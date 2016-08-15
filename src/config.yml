@@ -2,6 +2,7 @@
 # Fichier de configuration du plugin                                 #
 ######################################################################
 ScoreBoardName: FkPlugin
+lang: fr-be
 
 autoStart: false
 maxPlayer: 20
@@ -15,7 +16,7 @@ stopTimer: 30
 world: world
 
 friendlyFire: false
-canSeefriendlyInvisible: false
+canSeeFriendlyInvisible: true
 
 pvpDay: 2
 AssaultDay: 5
@@ -23,11 +24,11 @@ AssaultDay: 5
 ########@#######################################
 # Configuration des bases.                     #
 #########@######################################
-BaseSize: 30
+BaseSize: 9
 
 BaseList:
   Blue: true
-  Red: false
+  Red: true
   Green: false
   Yellow: false
 
@@ -36,49 +37,21 @@ Blue:
   y: 0.0
   z: 0.0
   world: world
-  
+
 Red:
   x: 0.0
   y: 0.0
   z: 0.0
-  world: world 
-  
+  world: world
+
 Green:
   x: 0.0
   y: 0.0
   z: 0.0
   world: world
-  
+
 Yellow:
   x: 0.0
   y: 0.0
-  z: 0.0 
+  z: 0.0
   world: world
-
-######################################################################
-# Configuration des textes affichés                                   #
-# ================================================================== #
-# Ce fichier correspond au francais (fr-be)                          #
-######################################################################
-text:
-  reminder1: "[IMPORTANT] Ne pas oublier de configurer les coordonées des bases !"
-  reminder2: "            Pour cela il vous faudrat éteindre le serveur !"
-  nopermission: "Erreur: Vous n'avez pas la permission !"
-  blockremove: "Le block à été retiré de la liste"
-  blockadded: "Le block à été ajouté à la liste"
-  playernotconnected: "Erreur: Le joueur n'est pas connecté !"
-  menuopening: "Ouverture du gui"
-  alreadystarted: "Erreur: La partie est deja lancée !"
-  pauseon: "Pause activée."
-  pauseoff: "Pause désactivée."
-  commanddescription:
-    start: "    Téléporte les joueurs dans leurs bases et démare la partie"
-    stop: "    Arrête définitivement la partie"
-    open: "    Ouvre le gui pour choisir son équipe"
-    pause1: "    Met en pause la partie"
-    pause2: "     - Fige les joueurs"
-    pause3: "     - Arrete les compteurs de temps"
-    pause4: "     - empeche de placer ou casser des blocks"
-    player: "    Ajoute ou supprime un joueur dans une équipe"
-    block: "    Ajoute un block à la liste des blocks autorisés"
-    blocklist: "    Affiche la liste des blocks autorisés"

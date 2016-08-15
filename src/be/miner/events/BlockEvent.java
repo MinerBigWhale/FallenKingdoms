@@ -5,10 +5,7 @@ import be.miner.Main;
 import be.miner.data.Base;
 import be.miner.data.Game;
 import be.miner.utils.Prefix;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.GameMode;
-import org.bukkit.Location;
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -58,12 +55,22 @@ public class BlockEvent implements org.bukkit.event.Listener {
 
         double x = loc.getX();
         double z = loc.getZ();
+        double y = loc.getY();
         if (Game.isPaused()){
             e.setCancelled(true);
             player.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Vous ne pouvez pas poser de blocks pendant la pause !");
             return;
         }
         if (Game.isRunning()) { //is the game is running
+            if (block.getType().equals(Material.SIGN)) {
+                for (Base base : Game.getBases()) {
+                    if (base.hasPlayer(player)) {
+                        if (!(x > base.getNegativeX() && x < base.getPositiveX() && z > base.getNegativeZ() && z < base.getPositiveZ() && y > base.getNegativeY() && y < base.getPositiveY())) {
+
+                        }
+                    }
+                }
+            }
             if (player.getWorld().equals(Bukkit.getWorld(Main.getConfigFile().getString("world")))) { //is the player in over world
                 if (!player.getGameMode().equals(GameMode.CREATIVE)) { //is not the player in creative
                     if (!Game.hasBlock(block.getType())) { //is the block in authorized block

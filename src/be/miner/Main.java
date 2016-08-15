@@ -6,6 +6,7 @@ import be.miner.events.*;
 import be.miner.gui.IconMenu;
 import be.miner.utils.PluginFile;
 import be.miner.data.Game;
+import be.miner.utils.PluginLangFile;
 import be.miner.utils.Prefix;
 import org.bukkit.*;
 import org.bukkit.command.CommandExecutor;
@@ -21,6 +22,7 @@ public class Main extends JavaPlugin {
 
     private static PluginFile fileConfig;
     private static PluginFile fileBlock;
+    private static PluginLangFile fileText;
     private static Plugin pl = Bukkit.getPluginManager().getPlugin("FkPlugin");
     public static IconMenu menu;
 
@@ -38,13 +40,18 @@ public class Main extends JavaPlugin {
         menu = new IconMenu();
         Bukkit.getPluginManager().registerEvents(new MenuEvent(), this);
 
+        //Load lang files
+        new PluginLangFile(this, "fr-be.yml", "fr-be.yml");
+        new PluginLangFile(this, "en-uk.yml", "en-uk.yml");
+
         //Load files
-        fileConfig = new PluginFile(this, "config.yml");
-        fileBlock = new PluginFile(this, "blocklist.yml");
+        fileConfig = new PluginFile(this, "config.yml", "config.yml");
+        fileBlock = new PluginFile(this, "blocklist.yml", "blocklist.yml");
+        fileText = new PluginLangFile(this, this.getConfigFile().getString("lang") + ".yml");
 
         //print messages in Admin consoles
-        Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.DARK_RED + this.getConfigFile().getString("text.reminder1"));
-        Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.DARK_RED + this.getConfigFile().getString("text.reminder2"));
+        Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.DARK_RED + "[IMPORTANT] Ne pas oublier de configurer les coordonées des bases !");
+        Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.DARK_RED + "            Pour cela il vous faudrat éteindre le serveur !");
         Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.YELLOW + "Developped by:" + ChatColor.WHITE + " MinerBigWhale, " + ChatColor.YELLOW + " inspired by:" + ChatColor.WHITE + " TeaB0" + ChatColor.YELLOW + "'s plugin");
 
         //Load Base objects
@@ -73,4 +80,5 @@ public class Main extends JavaPlugin {
 
     public static PluginFile getConfigFile(){ return fileConfig; }
     public static PluginFile getBlockFile(){ return fileBlock; }
+    public static PluginFile getLangFile(){ return (PluginFile) fileText; }
 }

@@ -26,7 +26,7 @@ public class Base {
     private World _world;
     private Team _team;
     private Scoreboard _scoreboard;
-    private double _xPositive, _zPositive, _xNegative, _zNegative;
+    private double _xPositive, _zPositive, _yPositive, _xNegative, _zNegative, _yNegative;
     private HashMap<String, Player> _players = new HashMap<String, Player>();
 
     public Base(String color){ this(color, color);}
@@ -60,9 +60,11 @@ public class Base {
         _size = Main.getConfigFile().getDouble("BaseSize");
         _xPositive = _x + _size / 2.0D;
         _zPositive = _z + _size / 2.0D;
+        _yPositive = _y + _size;
 
         _xNegative = _x - _size / 2.0D;
         _zNegative = _z - _size / 2.0D;
+        _yNegative = _y - _size;
 
         // print Base informations
         Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.GREEN + "Base " + _chatColor + _name + ChatColor.GREEN + " Created");
@@ -75,15 +77,18 @@ public class Base {
         //Setup scoreboard team
         _scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();
         try {
-            _team = _scoreboard.getTeam(getName());
-        } catch (Exception e) {
-            _scoreboard.registerNewTeam(getName());
-            _team = _scoreboard.getTeam(getName());
-        } finally {
-            _team.setDisplayName(getNameString());
+            _team = _scoreboard.getTeam(_name);
+            _team.setDisplayName(_chatColor + _name);
             _team.setAllowFriendlyFire(Main.getConfigFile().getBoolean("friendlyFire"));
-            _team.setCanSeeFriendlyInvisibles(Main.getConfigFile().getBoolean("canSeefriendlyInvisible"));
-            _team.setPrefix(getChatColor() + "");
+            _team.setCanSeeFriendlyInvisibles(Main.getConfigFile().getBoolean("canSeeFriendlyInvisible"));
+            _team.setPrefix(_chatColor + "");
+        } catch (Exception e) {
+            _scoreboard.registerNewTeam(_name);
+            _team = _scoreboard.getTeam(_name);
+            _team.setDisplayName(_chatColor + _name);
+            _team.setAllowFriendlyFire(Main.getConfigFile().getBoolean("friendlyFire"));
+            _team.setCanSeeFriendlyInvisibles(Main.getConfigFile().getBoolean("canSeeFriendlyInvisible"));
+            _team.setPrefix(_chatColor + "");
         }
     }
 
@@ -98,8 +103,10 @@ public class Base {
     public World getWorld() { return _world; }
     public double getPositiveX() { return _xPositive; }
     public double getPositiveZ() { return _zPositive; }
+    public double getPositiveY() { return _yPositive; }
     public double getNegativeX() { return _xNegative; }
     public double getNegativeZ() { return _zNegative; }
+    public double getNegativeY() { return _yNegative; }
 
     //Players
     //------
