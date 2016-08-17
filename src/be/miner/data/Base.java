@@ -120,7 +120,7 @@ public class Base {
             }
         }
         if (!hasPlayer(player)) {
-            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GOLD + player.getName() + ChatColor.GREEN + " à rejoint l'équipe " + getNameString());
+            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GOLD + player.getName() + ChatColor.GREEN + Main.getLangFile().getString("message.playerhasjointeam") + getNameString());
         }
         _players.put(player.getName(), player);
         _team.addPlayer(player);
@@ -130,7 +130,7 @@ public class Base {
         if (hasPlayer(player)) {
             _players.remove(player.getName());
             _team.removePlayer(player);
-            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GOLD + player.getName() + ChatColor.GREEN + " à quitté l'equipe " + getNameString());
+            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GOLD + player.getName() + ChatColor.GREEN + Main.getLangFile().getString("message.playerhasleaveteam") + getNameString());
         }
     }
 

@@ -1,5 +1,6 @@
 package be.miner.events;
 
+import be.miner.Main;
 import be.miner.data.Timer;
 import be.miner.utils.Prefix;
 import org.bukkit.ChatColor;
@@ -18,7 +19,7 @@ public class DamageEvent implements Listener {
             Player killer = (Player) e.getDamager();
             Player victime = (Player) e.getEntity();
             if (Timer.getJours() < this.config.getInt("pvpDay")) {
-                killer.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Le jour de PVP n'est pas encore arrivé !");
+                killer.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("message.cannothurt"));
                 e.setDamage(0.0D);
                 e.setCancelled(true);
             } else {

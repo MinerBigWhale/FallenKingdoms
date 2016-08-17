@@ -1,0 +1,65 @@
+######################################################################
+# Configuration des textes affichés                                   #
+# ================================================================== #
+# Ce fichier correspond au francais (fr-be)                          #
+######################################################################
+error:
+  nopermission: "Erreur: Vous n'avez pas la permission !"
+  alreadystarted: "Erreur: La partie est deja lancée !"
+  playernotconnected: "Erreur: Le joueur n'est pas connecté !"
+  cannotadd: "Erreur : Impossible d'ajouter "
+  cannotremove: "Erreur : Impossible d'enlever "
+  playernotinthisteam: "Erreur: le joueur n'est pas dans cette équipe !"
+  playerisinthisteam: "Erreur: le joueur est déja dans cette équipe !"
+  thisisnotabase: "Erreur: Cette équipe ne correspond à aucune base activée !"
+
+commanddescription:
+  start: "    Téléporte les joueurs dans leurs bases et démare la partie"
+  stop: "    Arrête définitivement la partie"
+  open: "    Ouvre le menu pour choisir son équipe"
+  pause1: "    Met en pause la partie"
+  pause2: "     - Fige les joueurs"
+  pause3: "     - Arrete les compteurs de temps"
+  pause4: "     - empeche de placer ou casser des blocks"
+  player: "    Ajoute ou supprime un joueur dans une équipe"
+  block: "    Ajoute un block à la liste des blocks autorisés"
+
+commandfeedback:
+  blockremove: "Le block à été retiré de la liste"
+  blockadded: "Le block à été ajouté à la liste"
+  menuopening: "Ouverture du menu"
+  pauseon: "Pause activée."
+  pauseoff: "Pause désactivée."
+
+message:
+  playerhasjointeam: " à rejoint l'équipe "
+  playerhasleaveteam: " à quitté l'equipe "
+  startcountdown1: "La partie commence dans: "
+  startcountdown2: " seconde(s) !"
+  startgame: "=== La partie commence ! ==="
+  teleportation: "Téléportation des joueurs."
+  endofday: "Fin du jour "
+  pvpday: "Que le sang coule à flots !"
+  assaultday: "À l'abordage !"
+  endgame: "===  Fin de la partie ! ==="
+  stopcountdown1: "Fin du serveur dans: "
+  stopcountdown2: " seconde(s) !"
+  distributeplayer: "Répartition des joueurs sans équipe"
+  balanceteam: "Equilibrage des équipes"
+  cannothurt: "Le jour de PVP n'est pas encore arrivé !"
+  isback1: " de l'équipe "
+  isback2: " est de retour dans la partie"
+  spectator: " est spectateur"
+  join: " à rejoins la partie"
+
+restriction:
+  breakblockpause: "Vous ne pouvez pas casser de blocks pendant la pause !"
+  breakblockbase: "Vous ne pouvez pas casser de blocks dans les autres bases !"
+  placeblockpause: "Vous ne pouvez pas poser de blocks pendant la pause !"
+  placeblockbase: "Vous ne pouvez pas poser de blocks hors de votre base !"
+  movepause: "Vous ne pouvez pas bouger pendant la pause !"
+
+joinmenu:
+  title: "Selectionnez une équipe"
+  leave: "Spectateur"
+

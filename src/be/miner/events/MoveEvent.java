@@ -1,5 +1,6 @@
 package be.miner.events;
 
+import be.miner.Main;
 import be.miner.data.Game;
 import be.miner.data.Timer;
 import be.miner.utils.Prefix;
@@ -18,7 +19,7 @@ public class MoveEvent implements Listener {
         Player player = e.getPlayer();
         if (Game.isPaused()){
             e.setCancelled(true);
-            player.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Vous ne pouvez pas bouger pendant la pause !");
+            player.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("restriction.movepause"));
             return;
         }
         Timer.getScoreBoard().updateInfoValue(player).update(player);

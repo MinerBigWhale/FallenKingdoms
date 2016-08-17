@@ -68,11 +68,11 @@ public class Timer {
         checkPlayerDistribution();
         _taskIdStart = Bukkit.getScheduler().scheduleSyncRepeatingTask(pl, () -> {
             _startTimer -= 1;
-            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.YELLOW + "La partie commence dans " + ChatColor.WHITE + (_startTimer + 1) + ChatColor.YELLOW + " seconde(s) !");
+            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.YELLOW + Main.getLangFile().getString("message.startcountdown1") + ChatColor.WHITE + (_startTimer + 1) + ChatColor.YELLOW + Main.getLangFile().getString("message.startcountdown2"));
             if (_startTimer == 0) {
                 Bukkit.getWorld(Main.getConfigFile().getString("world")).setTime(0L);
                 Game.pause(false);
-                Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.YELLOW + ChatColor.BOLD + "La partie commence !");
+                Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.YELLOW + ChatColor.BOLD + Main.getLangFile().getString("message.startgame"));
                 updateTimer();
                 Game.start();
                 Bukkit.getWorld(Main.getConfigFile().getString("world")).setTime(0);
@@ -86,7 +86,7 @@ public class Timer {
                         }
                     }
                 }
-                Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GREEN + "Téléportation des joueurs .");
+                Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GREEN + Main.getLangFile().getString("message.teleportation"));
                 Bukkit.getScheduler().cancelTask(_taskIdStart);
             }
         }, 0L, 20L);
@@ -104,12 +104,12 @@ public class Timer {
                     _minutes++;
                     if (_minutes == 20) {
                         Bukkit.getWorld(Main.getConfigFile().getString("world")).setTime(0L);
-                        Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GREEN + "Fin du jour " + ChatColor.AQUA + _jours);
+                        Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GREEN + Main.getLangFile().getString("message.endofday") + ChatColor.AQUA + _jours);
                         if (_jours == Main.getConfigFile().getInt("pvpDay")) {
-                            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.YELLOW + "Que le sang coule à flots !");
+                            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.YELLOW + Main.getLangFile().getString("message.pvpday"));
                         }
                         if (_jours == Main.getConfigFile().getInt("AssaultDay")) {
-                            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.YELLOW + "À l'abordage !");
+                            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.YELLOW + Main.getLangFile().getString("message.assaultday"));
                         }
                         _minutes = 0;
                         _jours++;
@@ -123,15 +123,13 @@ public class Timer {
 
     public static void stopFk(Plugin pl) {
         stopTimer();
-        Bukkit.broadcastMessage(ChatColor.DARK_GREEN + "===  Fin de la partie  ===");
+        Bukkit.broadcastMessage(ChatColor.DARK_GREEN + Main.getLangFile().getString("message.endgame"));
         Game.stop();
         if (Main.getConfigFile().getBoolean("stopServer")) {
             _taskIdStop = Bukkit.getScheduler().scheduleSyncRepeatingTask(pl, () -> {
                 _stopTimer -= 1;
-                if ((_stopTimer == 15) || (_stopTimer == 10) || ((_stopTimer > 1) && (_stopTimer <= 5))) {
-                    Bukkit.broadcastMessage(ChatColor.YELLOW + "Fin du serveur dans: " + ChatColor.WHITE + _stopTimer + ChatColor.YELLOW + " secondes !");
-                } else if (_stopTimer == 1) {
-                    Bukkit.broadcastMessage(ChatColor.YELLOW + "Fin du serveur dans: " + ChatColor.WHITE + _stopTimer + ChatColor.YELLOW + " seconde !");
+                if ((_stopTimer == 15) || (_stopTimer == 10) || ((_stopTimer >= 1) && (_stopTimer <= 5))) {
+                    Bukkit.broadcastMessage(ChatColor.YELLOW + Main.getLangFile().getString("message.stopcountdown1") + ChatColor.WHITE + _stopTimer + ChatColor.YELLOW + Main.getLangFile().getString("message.stopcountdown2"));
                 } else if (_stopTimer == 0) {
                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "stop");
                     Bukkit.getScheduler().cancelTask(_taskIdStop);
@@ -166,21 +164,21 @@ public class Timer {
     }
 
     public static void checkPlayerDistribution() {
-        Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GREEN + "Répartition des joueurs sans équipe");
+        Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GREEN + Main.getLangFile().getString("message.distributeplayer"));
         //Distribute undecided players
 
         try {
             HashMap<String, Player> players = new HashMap<String, Player>();
             for (Player player: Bukkit.getOnlinePlayers()) {
                 players.put(player.getName(), player);
-                Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + player.getName() + "is online");
+                Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + "- " + player.getName() + "is online");
             }
 
             players.forEach((name, player) -> {
                 for (Base base : Game.getBases()) {
                     if (base.hasPlayer(player)) {
                         players.remove(name);
-                        Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + name + "has already a team");
+                        Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + "- " + name + "has already a team");
                     }
                 }
             });
@@ -196,12 +194,12 @@ public class Timer {
             });
         } catch (Exception e) {Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + "No player without team");}
 
-            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GREEN + "Equilibrage des équipes");
+            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GREEN + Main.getLangFile().getString("message.balanceteam"));
             //equilibrate base load
             HashMap<String, Player> players = new HashMap<String, Player>();
             for (Player player: Bukkit.getOnlinePlayers()) {
                 players.put(player.getName(), player);
-                Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + player.getName() + "is online");
+                Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + "- " + player.getName() + "is online");
             }
 
             players.forEach((name, player) -> {

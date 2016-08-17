@@ -30,3 +30,36 @@ commandfeedback:
   menuopening: "Ouverture du menu"
   pauseon: "Pause activée."
   pauseoff: "Pause désactivée."
+
+message:
+  playerhasjointeam: " à rejoint l'équipe "
+  playerhasleaveteam: " à quitté l'equipe "
+  startcountdown1: "La partie commence dans: "
+  startcountdown2: " seconde(s) !"
+  startgame: "=== La partie commence ! ==="
+  teleportation: "Téléportation des joueurs."
+  endofday: "Fin du jour "
+  pvpday: "Que le sang coule à flots !"
+  assaultday: "À l'abordage !"
+  endgame: "===  Fin de la partie ! ==="
+  stopcountdown1: "Fin du serveur dans: "
+  stopcountdown2: " seconde(s) !"
+  distributeplayer: "Répartition des joueurs sans équipe"
+  balanceteam: "Equilibrage des équipes"
+  cannothurt: "Le jour de PVP n'est pas encore arrivé !"
+  isback1: " de l'équipe "
+  isback2: " est de retour dans la partie"
+  spectator: " est spectateur"
+  join: " à rejoins la partie"
+
+restriction:
+  breakblockpause: "Vous ne pouvez pas casser de blocks pendant la pause !"
+  breakblockbase: "Vous ne pouvez pas casser de blocks dans les autres bases !"
+  placeblockpause: "Vous ne pouvez pas poser de blocks pendant la pause !"
+  placeblockbase: "Vous ne pouvez pas poser de blocks hors de votre base !"
+  movepause: "Vous ne pouvez pas bouger pendant la pause !"
+
+joinmenu:
+  title: "Selectionnez une équipe"
+  leave: "Spectateur"
+
