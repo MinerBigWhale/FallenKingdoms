@@ -9,8 +9,8 @@ error:
   playernotconnected: "Erreur: Le joueur n'est pas connecté !"
   cannotadd: "Erreur : Impossible d'ajouter "
   cannotremove: "Erreur : Impossible d'enlever "
-  playernotinthisteam: "Erreur: le joueur n'est pas dans cette équipe !"
-  playerisinthisteam: "Erreur: le joueur est déja dans cette équipe !"
+  playernotinthisteam: "Erreur: Le joueur n'est pas dans cette équipe !"
+  playerisinthisteam: "Erreur: Le joueur est déja dans cette équipe !"
   thisisnotabase: "Erreur: Cette équipe ne correspond à aucune base activée !"
 
 commanddescription:

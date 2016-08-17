@@ -1,5 +1,6 @@
 package be.miner.utils;
 
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -18,11 +19,22 @@ public class PluginFile extends YamlConfiguration {
     }
 
     public PluginFile(JavaPlugin plugin, String fileName, String fromFileName) {
-        this.plugin = plugin;
-        this.file = new File(plugin.getDataFolder(), fileName);
-        this.fromFile = fromFileName;
+        setPlugin(plugin);
+        setFile(new File(plugin.getDataFolder(), fileName));
+        setFromFileFile(fromFileName);
         reload();
     }
+
+    protected void setFile(File file){
+        this.file = file;
+    }
+    protected void setFromFileFile(String fromFileName){
+        this.fromFile = fromFileName;
+    }
+    protected void setPlugin(JavaPlugin plugin){
+        this.plugin = plugin;
+    }
+
 
     public PluginFile() {
     }
@@ -35,8 +47,10 @@ public class PluginFile extends YamlConfiguration {
                 boolean mkdirs = this.file.getParentFile().mkdirs();
                 boolean newFile = this.file.createNewFile();
                 //fill with default content if needed
-                if (fromFile != null) {
-                    InputStreamReader reader = new InputStreamReader(this.plugin.getResource(this.fromFile));
+                if (fromFile != null && this.plugin != null) {
+                    InputStream in = this.plugin.getResource(this.fromFile);
+                    if (in == null) { throw new NullPointerException(); }
+                    InputStreamReader reader = new InputStreamReader(in);
                     PrintWriter writer = new PrintWriter(this.file);
                     try{
                         int readBytes;
@@ -45,35 +59,39 @@ public class PluginFile extends YamlConfiguration {
                             writer.write(buffer, 0, readBytes);
                         }
                     } catch (Exception e) {
-                        this.plugin.getLogger().severe("An error occured while filling file " + this.file.getName());
+                        e.printStackTrace();
+                        Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + "An error occured while filling file " + this.file.getName());
                     } finally {
                         reader.close();
                         writer.close();
                     }
                 }
-            } catch (IOException exception) {
-                exception.printStackTrace();
-                this.plugin.getLogger().severe("An error occured while creating file " + this.file.getName());
+            } catch (Exception e) {
+                e.printStackTrace();
+                Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + "An error occured while creating file " + this.file.getName());
             }
         }
 
         //reload file content to memory
         try {
             load(this.file);
-            InputStreamReader reader = new InputStreamReader(this.plugin.getResource(this.fromFile));
-            try{
-                FileConfiguration defaultsConfig = YamlConfiguration.loadConfiguration(reader);
+            if (fromFile != null && this.plugin != null) {
+                InputStreamReader reader = new InputStreamReader(this.plugin.getResource(this.fromFile));
+                try {
+                    FileConfiguration defaultsConfig = YamlConfiguration.loadConfiguration(reader);
 
-                setDefaults(defaultsConfig);
-                options().copyDefaults(true);
-            } catch (Exception e) {
-                this.plugin.getLogger().severe("An error occured while reloading file in memory " + this.file.getName());
-            } finally {
-                reader.close();
+                    setDefaults(defaultsConfig);
+                    options().copyDefaults(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + "An error occured while reloading file in memory " + this.file.getName());
+                } finally {
+                    reader.close();
+                }
             }
-        } catch (IOException | InvalidConfigurationException exception) {
-            exception.printStackTrace();
-            this.plugin.getLogger().severe("An error occured while reloading file in memory " + this.file.getName());
+        } catch (Exception e) {
+            e.printStackTrace();
+            Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + "An error occured while reloading file in memory " + this.file.getName());
         }
     }
 
@@ -82,9 +100,9 @@ public class PluginFile extends YamlConfiguration {
         try {
             options().indent(2);
             save(this.file);
-        } catch (IOException exception) {
-            exception.printStackTrace();
-            this.plugin.getLogger().severe("An error occured while saving file " + this.file.getName());
+        } catch (Exception e) {
+            e.printStackTrace();
+            Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + "An error occured while saving file " + this.file.getName());
         }
     }
 }

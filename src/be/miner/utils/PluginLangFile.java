@@ -11,18 +11,15 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 public class PluginLangFile extends PluginFile {
-    private File file;
-    private JavaPlugin plugin;
-    private String fromFile;
 
     public PluginLangFile(JavaPlugin plugin, String fileName) {
         this(plugin, fileName, null);
     }
 
     public PluginLangFile(JavaPlugin plugin, String fileName, String fromFileName) {
-        this.plugin = plugin;
-        this.file = new File(plugin.getDataFolder() + "/Lang", fileName);
-        this.fromFile = fromFileName;
+        setPlugin(plugin);
+        setFile(new File(plugin.getDataFolder() + "/Lang", fileName));
+        setFromFileFile(fromFileName);
         reload();
     }
 }

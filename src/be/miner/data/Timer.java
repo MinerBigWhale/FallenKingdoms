@@ -182,18 +182,11 @@ public class Timer {
                     }
                 }
             });
+        } catch (Exception e) {
+            Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + "No player without team");
+        }
 
-            players.forEach((name, player) -> {
-                Base poorbase = null;
-                for (Base base : Game.getBases()) {
-                    if (poorbase == null || base.getPlayers().size() < poorbase.getPlayers().size()) {
-                        poorbase = base;
-                    }
-                }
-                poorbase.addPlayer(player);
-            });
-        } catch (Exception e) {Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + "No player without team");}
-
+        try {
             Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GREEN + Main.getLangFile().getString("message.balanceteam"));
             //equilibrate base load
             HashMap<String, Player> players = new HashMap<String, Player>();
@@ -216,8 +209,12 @@ public class Timer {
                 if (richbase.getPlayers().size() - poorbase.getPlayers().size() > 1) {
                     poorbase.addPlayer(player);
                 }
+                else {
+                    Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + "No needs to balance teams");
+                }
             });
-        try {
-        } catch (Exception e) {Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + "No needs to balance teams");}
+        } catch (Exception e) {
+            Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.BLUE + "No needs to balance teams");
+        }
     }
 }
