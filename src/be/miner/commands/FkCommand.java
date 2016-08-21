@@ -1,10 +1,10 @@
 package be.miner.commands;
 
-import be.miner.data.Timer;
-import be.miner.gui.MainMenu;
 import be.miner.Main;
 import be.miner.data.Base;
 import be.miner.data.Game;
+import be.miner.data.Timer;
+import be.miner.gui.MainMenu;
 import be.miner.utils.Prefix;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -44,6 +44,14 @@ public class FkCommand implements CommandExecutor {
                     }
                 } else {
                     p.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Usage: /fk stop !");
+                }
+            } else if (args[0].equalsIgnoreCase("limit")) {
+                if (args.length == 1) {
+                    for (Base base : Game.getBases()){
+                        base.border();
+                    }
+                } else {
+                    p.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Usage: /fk limit !");
                 }
             } else if (args[0].equalsIgnoreCase("open")) {
                 if (args.length == 1) {

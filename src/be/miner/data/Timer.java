@@ -1,8 +1,8 @@
 package be.miner.data;
 
 import be.miner.Main;
-import be.miner.utils.Prefix;
 import be.miner.utils.CustomBoard;
+import be.miner.utils.Prefix;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
@@ -10,7 +10,7 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-import java.util.*;
+import java.util.HashMap;
 
 
 public class Timer {
@@ -65,6 +65,11 @@ public class Timer {
 
     public static void startFk(Plugin pl) {
         stopTimer();
+        if (Main.getConfigFile().getBoolean("showBaseLimit")) {
+            for (Base base : Game.getBases()){
+                base.showBorder();
+            }
+        }
         checkPlayerDistribution();
         _taskIdStart = Bukkit.getScheduler().scheduleSyncRepeatingTask(pl, () -> {
             _startTimer -= 1;
@@ -95,6 +100,11 @@ public class Timer {
     public static void updateTimer() {
         taskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(pl, () -> {
             if (!Game.isPaused()) {
+                if (_secondes == Main.getConfigFile().getInt("baseLimitTimer")) {
+                    for (Base base : Game.getBases()){
+                        base.hideBorder();
+                    }
+                }
                 _secondes++;
                 _totalSecond++;
                 _toPvp--;

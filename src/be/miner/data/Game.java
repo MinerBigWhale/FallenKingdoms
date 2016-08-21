@@ -2,11 +2,8 @@ package be.miner.data;
 
 import be.miner.Main;
 import be.miner.utils.PluginFile;
-import be.miner.utils.Prefix;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.util.ArrayList;
 

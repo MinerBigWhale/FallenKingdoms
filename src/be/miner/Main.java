@@ -1,22 +1,19 @@
 package be.miner;
 
 import be.miner.commands.FkCommand;
+import be.miner.data.Base;
+import be.miner.data.Game;
 import be.miner.data.Timer;
 import be.miner.events.*;
 import be.miner.gui.IconMenu;
 import be.miner.utils.PluginFile;
-import be.miner.data.Game;
 import be.miner.utils.PluginLangFile;
 import be.miner.utils.Prefix;
-import org.bukkit.*;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
-import be.miner.data.Base;
-import org.bukkit.scoreboard.Scoreboard;
-import org.bukkit.scoreboard.Team;
-
-import java.sql.Time;
 
 public class Main extends JavaPlugin {
 

@@ -2,17 +2,17 @@ package be.miner.data;
 
 
 import be.miner.Main;
+import be.miner.gui.RegionHighlighter;
 import be.miner.utils.Prefix;
-import com.google.common.collect.ForwardingMapEntry;
-import org.bukkit.*;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
 import org.bukkit.util.Vector;
 
-import java.awt.*;
-import java.time.temporal.TemporalAmount;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -26,6 +26,7 @@ public class Base {
     private World _world;
     private Team _team;
     private Scoreboard _scoreboard;
+    private RegionHighlighter _regionHighLighter;
     private double _xPositive, _zPositive, _yPositive, _xNegative, _zNegative, _yNegative;
     private HashMap<String, Player> _players = new HashMap<String, Player>();
 
@@ -90,6 +91,9 @@ public class Base {
             _team.setCanSeeFriendlyInvisibles(Main.getConfigFile().getBoolean("canSeeFriendlyInvisible"));
             _team.setPrefix(_chatColor + "");
         }
+
+        //Setup Region HighLighter
+        _regionHighLighter = new RegionHighlighter(new Location(_world,_x,_y,_z),_size/2).setColor(_color);
     }
 
     public String getColor(){ return _color; }
@@ -186,6 +190,24 @@ public class Base {
             return "⬂";
         } else{
             return "⤬";//"❂";
+        }
+    }
+
+    public void border() {
+        if (_regionHighLighter.isShown()) {
+            _regionHighLighter.hideRegion();
+        } else {
+            _regionHighLighter.showRegion();
+        }
+    }
+    public void showBorder() {
+        if (!_regionHighLighter.isShown()) {
+            _regionHighLighter.showRegion();
+        }
+    }
+    public void hideBorder() {
+        if (_regionHighLighter.isShown()) {
+            _regionHighLighter.hideRegion();
         }
     }
 

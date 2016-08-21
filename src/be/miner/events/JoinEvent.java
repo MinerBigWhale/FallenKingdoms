@@ -1,10 +1,10 @@
 package be.miner.events;
 
-import be.miner.data.Timer;
-import be.miner.gui.MainMenu;
 import be.miner.Main;
 import be.miner.data.Base;
 import be.miner.data.Game;
+import be.miner.data.Timer;
+import be.miner.gui.MainMenu;
 import be.miner.utils.Prefix;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -12,12 +12,6 @@ import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerJoinEvent;
-
-import java.sql.Time;
-import java.util.AbstractList;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Comparator;
 
 public class JoinEvent implements org.bukkit.event.Listener {
     int _taskId;

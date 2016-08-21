@@ -4,11 +4,15 @@
 ScoreBoardName: FkPlugin
 lang: fr-be
 
+# start
 autoStart: false
 maxPlayer: 20
 startTimer: 10
+showBaseLimit: false
+baseLimitTimer: 30
 
 
+# end
 stopServer: false
 kickPlayers: false
 stopTimer: 30

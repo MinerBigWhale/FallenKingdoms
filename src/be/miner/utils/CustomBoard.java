@@ -3,15 +3,15 @@ package be.miner.utils;
 
 import be.miner.Main;
 import be.miner.data.Base;
-import be.miner.data.Timer;
 import be.miner.data.Game;
+import be.miner.data.Timer;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
-import org.bukkit.scoreboard.*;
+import org.bukkit.scoreboard.DisplaySlot;
+import org.bukkit.scoreboard.Objective;
+import org.bukkit.scoreboard.Scoreboard;
 
-import java.lang.*;
-import java.lang.Math;
 import java.util.HashMap;
 
 public class CustomBoard {
