@@ -1,9 +1,0 @@
-######################################################################
-# Liste des blocks autorisés                                         #
-######################################################################
-blocklist:
-  redstone_block: true
-  redstone_torch: true
-  lever: true
-  tnt: true
-  torch: true
