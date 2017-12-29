@@ -7,6 +7,6 @@ public class Console {
         Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + message);
     }
     public static void broadcast (String message) {
-        Console.broadcast( message);
+        Bukkit.broadcastMessage(Prefix.getPrefix() + message);
     }
 }
