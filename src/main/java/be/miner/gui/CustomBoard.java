@@ -109,19 +109,18 @@ public class CustomBoard {
         if (scoreboard == null) {
             scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
         }
-        Objective objective = scoreboard.getObjective(DisplaySlot.SIDEBAR);
-
         String objectivename = ("FK" + player.getName() + "00000000000000").substring(0, 16);
-        scoreboard.registerNewObjective(objectivename, "dummy");
-        objective = scoreboard.getObjective(objectivename);
+        Objective objective = scoreboard.getObjective(objectivename);
+        if (objective == null) {
+            objective = scoreboard.registerNewObjective(objectivename, "dummy");
+            objective.setDisplaySlot(DisplaySlot.SIDEBAR);
+        }
 
         if (Game.isRunning()) {
             for (int scorepos = -1; scorepos >= 0 - index; scorepos--) {
-                Team team;
                 String teamname = ("TE" + scorepos + "00000000000000").substring(0, 16);
-                try {
-                    team = scoreboard.getTeam(teamname);
-                } catch (Exception e) {
+                Team team = scoreboard.getTeam(teamname);
+                if (team == null) {
                     team = scoreboard.registerNewTeam(teamname);
                     team.addEntry(ChatColor.getByChar(String.valueOf(scorepos % 10)) + "" + ChatColor.getByChar(String.valueOf((scorepos + Math.floor(Math.random() * 10)) % 10)) + "");
                 }
@@ -137,7 +136,6 @@ public class CustomBoard {
         }
 
         objective.setDisplayName(strings[0]);
-        objective.setDisplaySlot(DisplaySlot.SIDEBAR);
     }
 
     public void close() {
@@ -153,9 +151,5 @@ public class CustomBoard {
             }
             player.setScoreboard(scoreboard);
         }
-    }
-
-    public void getTeam(String team) {
-
     }
 }

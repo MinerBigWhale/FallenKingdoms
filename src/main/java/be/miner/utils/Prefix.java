@@ -4,6 +4,6 @@ import org.bukkit.ChatColor;
 
 public class Prefix {
     public static String getPrefix() {
-        return ChatColor.GRAY + "[" + ChatColor.GOLD + "FK" + ChatColor.GRAY + "] ";
+        return ChatColor.GRAY + "[" + ChatColor.GOLD + "FallenKingdoms" + ChatColor.GRAY + "] ";
     }
 }

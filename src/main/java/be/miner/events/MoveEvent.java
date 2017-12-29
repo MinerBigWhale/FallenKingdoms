@@ -12,7 +12,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 
 public class MoveEvent implements Listener {
-    private FileConfiguration config = org.bukkit.Bukkit.getPluginManager().getPlugin("FkPlugin").getConfig();
+    private FileConfiguration config = org.bukkit.Bukkit.getPluginManager().getPlugin("FallenKingdoms").getConfig();
 
     @EventHandler
     public void onMove(PlayerMoveEvent e) {

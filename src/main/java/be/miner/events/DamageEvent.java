@@ -11,7 +11,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 
 public class DamageEvent implements Listener {
-    private FileConfiguration config = org.bukkit.Bukkit.getPluginManager().getPlugin("FkPlugin").getConfig();
+    private FileConfiguration config = org.bukkit.Bukkit.getPluginManager().getPlugin("FallenKingdoms").getConfig();
 
     @EventHandler
     public void onDamage(EntityDamageByEntityEvent e) {

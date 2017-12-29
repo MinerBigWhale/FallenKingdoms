@@ -64,7 +64,7 @@ public class PluginFile extends YamlConfiguration {
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
-                        Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + "An error occured while filling file " + this.file.getName());
+                        Console.log("An error occured while filling file " + this.file.getName());
                     } finally {
                         reader.close();
                         writer.close();
@@ -72,7 +72,7 @@ public class PluginFile extends YamlConfiguration {
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + "An error occured while creating file " + this.file.getName());
+                Console.log("An error occured while creating file " + this.file.getName());
             }
         }
 
@@ -88,14 +88,14 @@ public class PluginFile extends YamlConfiguration {
                     options().copyDefaults(true);
                 } catch (Exception e) {
                     e.printStackTrace();
-                    Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + "An error occured while reloading file in memory " + this.file.getName());
+                    Console.log("An error occured while reloading file in memory " + this.file.getName());
                 } finally {
                     reader.close();
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
-            Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + "An error occured while reloading file in memory " + this.file.getName());
+            Console.log("An error occured while reloading file in memory " + this.file.getName());
         }
     }
 
@@ -106,7 +106,7 @@ public class PluginFile extends YamlConfiguration {
             save(this.file);
         } catch (Exception e) {
             e.printStackTrace();
-            Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + "An error occured while saving file " + this.file.getName());
+            Console.log("An error occured while saving file " + this.file.getName());
         }
     }
 }

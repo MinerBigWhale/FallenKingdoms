@@ -5,7 +5,7 @@ import be.miner.data.Base;
 import be.miner.data.Game;
 import be.miner.data.Timer;
 import be.miner.gui.MainMenu;
-import be.miner.utils.Prefix;
+import be.miner.utils.Console;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
@@ -23,14 +23,14 @@ public class JoinEvent implements org.bukkit.event.Listener {
         for (Base base : Game.getBases()) {
             if (base.hasPlayer(player)) {
                 base.addPlayer(player);
-                Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.YELLOW + player.getDisplayName() + Main.getLangFile().getString("message.isback1") + base.getNameString() + ChatColor.YELLOW + Main.getLangFile().getString("message.isback2"));
+                Console.broadcast( ChatColor.YELLOW + player.getDisplayName() + Main.getLangFile().getString("message.isback1") + base.getNameString() + ChatColor.YELLOW + Main.getLangFile().getString("message.isback2"));
                 e.setJoinMessage(null);
                 return;
             }
         }
         if (Game.isRunning()) {
             player.setGameMode(GameMode.SPECTATOR);
-            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GRAY + player.getDisplayName() + Main.getLangFile().getString("message.spectator"));
+            Console.broadcast( ChatColor.GRAY + player.getDisplayName() + Main.getLangFile().getString("message.spectator"));
             e.setJoinMessage(null);
         } else {
             if (Main.getConfigFile().getBoolean("autoStart")) {
@@ -38,13 +38,13 @@ public class JoinEvent implements org.bukkit.event.Listener {
                 if (Main.getConfigFile().getInt("maxPlayer") >= playernum) {
                     Game.start();
                 }
-                Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.YELLOW + player.getDisplayName() + Main.getLangFile().getString("message.join") + " [" + playernum + "/" + Main.getConfigFile().getInt("maxPlayer") + "]");
+                Console.broadcast( ChatColor.YELLOW + player.getDisplayName() + Main.getLangFile().getString("message.join") + " [" + playernum + "/" + Main.getConfigFile().getInt("maxPlayer") + "]");
                 e.setJoinMessage(null);
             } else {
-                Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.YELLOW + player.getDisplayName() + Main.getLangFile().getString("message.join"));
+                Console.broadcast( ChatColor.YELLOW + player.getDisplayName() + Main.getLangFile().getString("message.join"));
                 e.setJoinMessage(null);
             }
-            _taskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("FkPlugin"), () -> {
+            _taskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(Bukkit.getPluginManager().getPlugin("FallenKingdoms"), () -> {
                 MainMenu.openMenu(player);
                 Bukkit.getScheduler().cancelTask(_taskId);
             }, 0L, 20L);

@@ -1,0 +1,7 @@
+name: FallenKingdoms
+version: 1.0
+author: MinerBigWhale
+main: be.miner.Main
+commands:
+  fk:
+    description: Commandes du plugin fallenkingdoms!

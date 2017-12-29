@@ -5,6 +5,7 @@ import be.miner.data.Base;
 import be.miner.data.Game;
 import be.miner.data.Timer;
 import be.miner.gui.MainMenu;
+import be.miner.utils.Console;
 import be.miner.utils.Prefix;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -16,7 +17,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
 public class FkCommand implements CommandExecutor {
-    private static Plugin pl = Bukkit.getPluginManager().getPlugin("FkPlugin");
+    private static Plugin pl = Bukkit.getPluginManager().getPlugin("FallenKingdoms");
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         Player p = (Player) sender;
@@ -27,7 +28,7 @@ public class FkCommand implements CommandExecutor {
                         if (!Game.isRunning()) {
                             Timer.startFk(pl);
                         } else {
-                            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.alreadystarted"));
+                            Console.broadcast( ChatColor.RED + Main.getLangFile().getString("error.alreadystarted"));
                         }
                     } else {
                         p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.nopermission"));
@@ -65,9 +66,9 @@ public class FkCommand implements CommandExecutor {
                     if (p.hasPermission("fk.pause")) {
                         Game.pause();
                         if (Game.isPaused()) {
-                            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GREEN + Main.getLangFile().getString("commandfeedback.pauseon"));
+                            Console.broadcast( ChatColor.GREEN + Main.getLangFile().getString("commandfeedback.pauseon"));
                         } else {
-                            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.YELLOW + Main.getLangFile().getString("commandfeedback.pauseoff"));
+                            Console.broadcast( ChatColor.YELLOW + Main.getLangFile().getString("commandfeedback.pauseoff"));
                         }
                     } else {
                         p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.nopermission"));
@@ -165,27 +166,27 @@ public class FkCommand implements CommandExecutor {
         } else {
             p.sendMessage(ChatColor.GOLD + "---------- FkPlugin Help ----------");
             p.sendMessage(ChatColor.YELLOW + "/fk start");
-            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.commanddescription.start"));
+            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.start"));
             p.sendMessage(ChatColor.GREEN + "    permission: fk.start");
             p.sendMessage(ChatColor.YELLOW + "/fk stop");
-            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.commanddescription.stop"));
+            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.stop"));
             p.sendMessage(ChatColor.GREEN + "    permission: fk.stop");
             p.sendMessage(ChatColor.YELLOW + "/fk open");
-            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.commanddescription.open"));
+            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.open"));
             p.sendMessage(ChatColor.YELLOW + "/fk pause");
-            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.commanddescription.pause1"));
-            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.commanddescription.pause2"));
-            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.commanddescription.pause3"));
-            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.commanddescription.pause4"));
+            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.pause1"));
+            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.pause2"));
+            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.pause3"));
+            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.pause4"));
             p.sendMessage(ChatColor.GREEN + "    permission: fk.pause");
             p.sendMessage(ChatColor.YELLOW + "/fk player <add/remove> <Player> <Blue, Red, Green, Yellow>");
-            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.commanddescription.player"));
+            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.player"));
             p.sendMessage(ChatColor.GREEN + "    permission: fk.player");
             p.sendMessage(ChatColor.YELLOW + "/fk block <add/remove> <Block>");
-            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.commanddescription.block"));
+            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.block"));
             p.sendMessage(ChatColor.GREEN + "    permission: fk.block");
             p.sendMessage(ChatColor.YELLOW + "/fk block list");
-            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.commanddescription.blocklist"));
+            p.sendMessage(ChatColor.WHITE + Main.getLangFile().getString("commanddescription.blocklist"));
             p.sendMessage(ChatColor.GREEN + "    permission: fk.block");
             p.sendMessage(ChatColor.GOLD + "--------------------------------");
         }

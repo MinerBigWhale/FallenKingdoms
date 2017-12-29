@@ -6,7 +6,7 @@ import org.bukkit.Particle;
 import org.bukkit.plugin.Plugin;
 
 public class RegionHighlighter {
-    private Plugin pl = Bukkit.getPluginManager().getPlugin("FkPlugin");
+    private Plugin pl = Bukkit.getPluginManager().getPlugin("FallenKingdoms");
     private int _r = 0, _g = 0, _b = 0;
     private Location _center;
     private double _hLimit;

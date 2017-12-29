@@ -3,7 +3,7 @@ package be.miner.data;
 
 import be.miner.Main;
 import be.miner.gui.RegionHighlighter;
-import be.miner.utils.Prefix;
+import be.miner.utils.Console;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -71,12 +71,12 @@ public class Base {
         _yNegative = _y - _size;
 
         // print Base informations
-        Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.GREEN + "Base " + _chatColor + _name + ChatColor.GREEN + " Created");
-        Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.YELLOW + "Center location: ");
-        Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.YELLOW + "x: " + ChatColor.WHITE + _x);
-        Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.YELLOW + "y: " + ChatColor.WHITE + _y);
-        Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.YELLOW + "z: " + ChatColor.WHITE + _z);
-        Bukkit.getConsoleSender().sendMessage(Prefix.getPrefix() + ChatColor.YELLOW + "Size: " + ChatColor.WHITE + _size);
+        Console.log(ChatColor.GREEN + "Base " + _chatColor + _name + ChatColor.GREEN + " Created");
+        Console.log(ChatColor.YELLOW + "Center location: ");
+        Console.log(ChatColor.YELLOW + "x: " + ChatColor.WHITE + _x);
+        Console.log(ChatColor.YELLOW + "y: " + ChatColor.WHITE + _y);
+        Console.log(ChatColor.YELLOW + "z: " + ChatColor.WHITE + _z);
+        Console.log(ChatColor.YELLOW + "Size: " + ChatColor.WHITE + _size);
 
         //Setup scoreboard team
         _scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();
@@ -176,7 +176,7 @@ public class Base {
             }
         }
         if (!hasPlayer(player)) {
-            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GOLD + player.getName() + ChatColor.GREEN + Main.getLangFile().getString("message.playerhasjointeam") + getNameString());
+            Console.broadcast( ChatColor.GOLD + player.getName() + ChatColor.GREEN + Main.getLangFile().getString("message.playerhasjointeam") + getNameString());
         }
         _players.put(player.getName(), player);
         _team.addPlayer(player);
@@ -187,7 +187,7 @@ public class Base {
         if (hasPlayer(player)) {
             _players.remove(player.getName());
             _team.removePlayer(player);
-            Bukkit.broadcastMessage(Prefix.getPrefix() + ChatColor.GOLD + player.getName() + ChatColor.GREEN + Main.getLangFile().getString("message.playerhasleaveteam") + getNameString());
+            Console.broadcast( ChatColor.GOLD + player.getName() + ChatColor.GREEN + Main.getLangFile().getString("message.playerhasleaveteam") + getNameString());
         }
     }
 
