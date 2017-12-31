@@ -5,6 +5,7 @@ import be.miner.Main;
 import be.miner.data.Base;
 import be.miner.data.Game;
 import be.miner.data.Timer;
+import be.miner.utils.Console;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -17,12 +18,13 @@ import java.util.HashMap;
 
 public class CustomBoard {
 
-    private String[] strings = new String[15];
+    private final String[] strings = new String[15];
     private String[] _baseStrings;
     private String[] _timeStrings;
-    private HashMap<String, String[]> _infoStrings = new HashMap<String, String[]>();
+    private final HashMap<String, String[]> _infoStrings = new HashMap<String, String[]>();
 
     public CustomBoard() {
+        close();
         updateBaseValue();
         updateTimeValue();
         updateInfoValue();
@@ -54,7 +56,7 @@ public class CustomBoard {
         index++;
         _timeStrings[index] = ChatColor.YELLOW + "PvP: " + ChatColor.AQUA + Timer.getToPvpTime();
         index++;
-        _timeStrings[index] = ChatColor.YELLOW + "Assault: " + ChatColor.AQUA + Timer.getToAssaultTime();
+        _timeStrings[index] = ChatColor.YELLOW + "Clash: " + ChatColor.AQUA + Timer.getToAssaultTime();
         index++;
         return this;
     }
@@ -65,7 +67,7 @@ public class CustomBoard {
     }
 
     public CustomBoard updateInfoValue(Player player) {
-        String[] infoString = new String[3];
+        String[] infoString = new String[4];
         int index = 0;
 
         infoString[index] = ChatColor.GRAY + "--- Infos --- ";
@@ -74,7 +76,9 @@ public class CustomBoard {
             if (base.hasPlayer(player)) {
                 infoString[index] = ChatColor.YELLOW + "Equipe: " + base.getNameString();
                 index++;
-                infoString[index] = ChatColor.YELLOW + "Base: " + ChatColor.GOLD + base.getDirectionString(player) + " " + ChatColor.YELLOW + Math.round(base.getDistance(player)) + "m";
+                infoString[index] = ChatColor.YELLOW + "Base: " + ChatColor.GOLD + base.getDirectionString(player);
+                index++;
+                infoString[index] = ChatColor.YELLOW + "      " + ChatColor.GOLD + Math.round(base.getDistance(player)) + "m";
                 index++;
             }
         }
@@ -118,19 +122,22 @@ public class CustomBoard {
 
         if (Game.isRunning()) {
             for (int scorepos = -1; scorepos >= 0 - index; scorepos--) {
-                String teamname = ("TE" + scorepos + "00000000000000").substring(0, 16);
+                String teamname = ("TE" + scorepos + "AAAAAAAAAAAAAA").substring(0, 16);
+                String entry = ChatColor.values()[-scorepos % 16] + "";
                 Team team = scoreboard.getTeam(teamname);
                 if (team == null) {
                     team = scoreboard.registerNewTeam(teamname);
-                    team.addEntry(ChatColor.getByChar(String.valueOf(scorepos % 10)) + "" + ChatColor.getByChar(String.valueOf((scorepos + Math.floor(Math.random() * 10)) % 10)) + "");
+                    team.addEntry(entry);
                 }
-                team.setPrefix(strings[-scorepos]);
-                objective.getScore((String) team.getEntries().toArray()[0]).setScore(scorepos);
+                int maxLength = (strings[-scorepos].length() < 16) ? strings[-scorepos].length() : 16;
+                team.setPrefix(strings[-scorepos].substring(0, maxLength));
+                //Console.log(entry + "|" + (team.getPrefix() + "                      ").substring(0, 16) + "|" + scorepos);
+                objective.getScore(entry).setScore(scorepos);
             }
         } else {
             for (Base base : Game.getBases()) {
                 if (base.hasPlayer(player)) {
-                    objective.getScore(ChatColor.YELLOW + "Equipe: " + base.getNameString()).setScore(0);
+                    objective.getScore(ChatColor.YELLOW + "Equipe: " + base.getNameString()).setScore(-1);
                 }
             }
         }
@@ -144,12 +151,16 @@ public class CustomBoard {
 
     public void close(Player player) {
         Scoreboard scoreboard = player.getScoreboard();
-        if (scoreboard != null) {
-            Objective objective = scoreboard.getObjective(DisplaySlot.SIDEBAR);
-            if (objective != null) {
-                objective.unregister();
+        if (scoreboard == null) return;
+        Objective objective = scoreboard.getObjective(DisplaySlot.SIDEBAR);
+        if (objective != null) {
+            for (int scorepos = -1; scorepos >= 0 - 15; scorepos--) {
+                String teamname = ("TE" + scorepos + "00000000000000").substring(0, 16);
+                Team team = scoreboard.getTeam(teamname);
+                if (team != null) team.unregister();
             }
-            player.setScoreboard(scoreboard);
+            objective.unregister();
         }
+        player.setScoreboard(scoreboard);
     }
 }
