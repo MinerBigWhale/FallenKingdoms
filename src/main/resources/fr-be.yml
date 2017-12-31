@@ -34,6 +34,8 @@ commandfeedback:
 message:
   playerhasjointeam: " à rejoint l'équipe "
   playerhasleaveteam: " à quitté l'equipe "
+  playerenterbase: "Vous entrez dans la base "
+  playerleavebase: "Vous sortez de la base "
   startcountdown1: "La partie commence dans: "
   startcountdown2: " seconde(s) !"
   startgame: "=== La partie commence ! ==="

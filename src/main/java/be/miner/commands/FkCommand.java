@@ -112,7 +112,7 @@ public class FkCommand implements CommandExecutor {
                                 blocks.add(material.toString());
                             }
                             p.sendMessage(Prefix.getPrefix() + ChatColor.GREEN + "Blocks in the " + ChatColor.GRAY + "blacklist :");
-                            p.sendMessage(Prefix.getPrefix() +ChatColor.YELLOW + "  " + String.join(", ",blocks));
+                            p.sendMessage(Prefix.getPrefix() + ChatColor.YELLOW + "  " + String.join(", ",blocks));
                         } else {
                             p.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Usage: /fk block list !");
                         }

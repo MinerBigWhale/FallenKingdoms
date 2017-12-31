@@ -4,6 +4,7 @@ package be.miner.data;
 import be.miner.Main;
 import be.miner.gui.RegionHighlighter;
 import be.miner.utils.Console;
+import be.miner.utils.Prefix;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -292,6 +293,20 @@ public class Base {
         if (_regionHighLighter.isShown()) {
             _regionHighLighter.hideRegion();
         }
+    }
+
+    private ArrayList<Player> _insiders = new ArrayList<Player>();
+
+    public void isIn(Player player){
+        if (_insiders.contains(player)) return;
+        _insiders.add(player);
+        player.sendMessage(Prefix.getPrefix()+ ChatColor.GREEN + Main.getLangFile().getString("message.playerenterbase") + getNameString());
+    }
+
+    public void isOut(Player player){
+        if (!_insiders.contains(player)) return;
+        _insiders.remove(player);
+        player.sendMessage(Prefix.getPrefix()+ ChatColor.GREEN + Main.getLangFile().getString("message.playerleavebase") + getNameString());
     }
 
 }

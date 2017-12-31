@@ -34,6 +34,8 @@ commandfeedback:
 message:
   playerhasjointeam: " has join the team "
   playerhasleaveteam: " has left the team "
+  playerenterbase: "You're entering the base "
+  playerleavebase: "You're leaving the base "
   startcountdown1: "The game is starting in: "
   startcountdown2: " second(s) !"
   startgame: "=== Let's game starting ! ==="
