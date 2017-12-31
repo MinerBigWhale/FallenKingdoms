@@ -1,6 +1,7 @@
 package be.miner.events;
 
 import be.miner.Main;
+import be.miner.data.Base;
 import be.miner.data.Game;
 import be.miner.data.Timer;
 import be.miner.utils.Prefix;
@@ -15,6 +16,15 @@ public class MoveEvent implements Listener {
     @EventHandler
     public void onMove(PlayerMoveEvent moveEvent) {
         Player player = moveEvent.getPlayer();
+
+        Boolean isSpectator = true;
+        for (Base base : Game.getBases()){
+            if (base.hasPlayer(player)){
+                isSpectator = false;
+            }
+        }
+        if (isSpectator) return;
+
         if (Game.isPaused()) {
             moveEvent.setCancelled(true);
             player.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("restriction.movepause"));

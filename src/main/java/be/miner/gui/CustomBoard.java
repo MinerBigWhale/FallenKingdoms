@@ -72,15 +72,25 @@ public class CustomBoard {
 
         infoString[index] = ChatColor.GRAY + "--- Infos --- ";
         index++;
+
+        Boolean isSpectator = true;
         for (Base base : Game.getBases()) {
             if (base.hasPlayer(player)) {
+                isSpectator = false;
                 infoString[index] = ChatColor.YELLOW + "Equipe: " + base.getNameString();
                 index++;
                 infoString[index] = ChatColor.YELLOW + "Base: " + ChatColor.GOLD + base.getDirectionString(player);
                 index++;
                 infoString[index] = ChatColor.YELLOW + "      " + ChatColor.GOLD + Math.round(base.getDistance(player)) + "m";
-                index++;
             }
+        }
+
+        if (isSpectator) {
+            infoString[index] = ChatColor.MAGIC + "1234567890ABCD";
+            index++;
+            infoString[index] = ChatColor.WHITE + "Spectator";
+            index++;
+            infoString[index] = ChatColor.MAGIC + "1234567890ABCD";
         }
         _infoStrings.put(player.getName(), infoString);
         return this;
