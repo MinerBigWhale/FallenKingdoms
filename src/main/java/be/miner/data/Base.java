@@ -185,6 +185,7 @@ public class Base {
         }
         _players.put(player.getName(), player);
         _team.addPlayer(player);
+        Timer.getScoreBoard().updateBaseValue().update();
 
     }
 
@@ -194,6 +195,7 @@ public class Base {
             _team.removePlayer(player);
             Console.broadcast( ChatColor.GOLD + player.getName() + ChatColor.GREEN + Main.getLangFile().getString("message.playerhasleaveteam") + getNameString());
         }
+        Timer.getScoreBoard().updateBaseValue().update();
     }
 
     public Double getDistance(Player player) {
