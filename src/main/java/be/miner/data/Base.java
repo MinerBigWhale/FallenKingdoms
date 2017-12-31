@@ -79,11 +79,11 @@ public class Base {
 
         // print Base informations
         Console.log(ChatColor.GREEN + "Base " + _chatColor + _name + ChatColor.GREEN + " Created");
-        Console.log(ChatColor.YELLOW + "Center location: ");
-        Console.log(ChatColor.YELLOW + "x: " + ChatColor.WHITE + _x);
-        Console.log(ChatColor.YELLOW + "y: " + ChatColor.WHITE + _y);
-        Console.log(ChatColor.YELLOW + "z: " + ChatColor.WHITE + _z);
-        Console.log(ChatColor.YELLOW + "Size: " + ChatColor.WHITE + _size);
+        Console.log(ChatColor.YELLOW + "  center location: ");
+        Console.log(ChatColor.YELLOW + "    x: " + ChatColor.WHITE + _x);
+        Console.log(ChatColor.YELLOW + "    y: " + ChatColor.WHITE + _y);
+        Console.log(ChatColor.YELLOW + "    z: " + ChatColor.WHITE + _z);
+        Console.log(ChatColor.YELLOW + "    size: " + ChatColor.WHITE + _size);
 
         //Setup scoreboard team
         _scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();

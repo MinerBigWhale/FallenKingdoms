@@ -76,7 +76,6 @@ public class BlockEvent implements org.bukkit.event.Listener {
             }
             if (player.getWorld().equals(Bukkit.getWorld(Main.getConfigFile().getString("world")))) { //is the player in over world
                 if (!player.getGameMode().equals(GameMode.CREATIVE)) { //is not the player in creative
-                    player.sendMessage(Prefix.getPrefix() + "Block placed type  is " + block.getType());
                     if (!Game.hasBlock(block.getType())) { //is the block in authorized block
                         //is player in his base
                         for (Base base : Game.getBases()) {

@@ -1,8 +1,10 @@
 package be.miner.data;
 
 import be.miner.Main;
+import be.miner.utils.Console;
 import be.miner.utils.PluginFile;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 
 import java.util.ArrayList;
@@ -74,25 +76,28 @@ public class Game {
     }
 
     public static void addBlock(Material material) {
-        Bukkit.broadcastMessage("Debug: addBlock( Material " + material.name() + ")");
         if (!_blocks.contains(material)) {
             _blocks.add(material);
-            Bukkit.broadcastMessage("Debug: " + material.name() + " added");
             PluginFile fileBlock = Main.getBlockFile();
-            fileBlock.set(material.name(), true);
+            fileBlock.set("blocklist." +material.toString().toLowerCase(), true);
             fileBlock.save();
         }
     }
 
     public static void addBlock(String materialName) {
-        addBlock(Material.matchMaterial(materialName));
+        Material material = Material.matchMaterial(materialName);
+        if (material == null) {
+            Console.log(ChatColor.RED + "Can't find the material '" +ChatColor.YELLOW + materialName +ChatColor.RED + "', unable to add it !");
+            return;
+        }
+        addBlock(material);
     }
 
     public static void removeBlock(Material material) {
         if (_blocks.contains(material)) {
             _blocks.remove(material);
             PluginFile fileBlock = Main.getBlockFile();
-            fileBlock.set(material.name(), false);
+            fileBlock.set("blocklist." +material.toString().toLowerCase(), false);
             fileBlock.save();
         }
     }

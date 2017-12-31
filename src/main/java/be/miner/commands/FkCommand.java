@@ -16,6 +16,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
+import java.util.ArrayList;
+
 public class FkCommand implements CommandExecutor {
     private static final Plugin _pl = Bukkit.getPluginManager().getPlugin("FallenKingdoms");
 
@@ -105,9 +107,12 @@ public class FkCommand implements CommandExecutor {
                 } else if (args.length == 2) {
                     if (p.hasPermission("fk.block")) {
                         if (args[1].equalsIgnoreCase("list")) {
+                            ArrayList<String> blocks = new ArrayList<String>();
                             for (Material material : Game.getBlocks()) {
-                                p.sendMessage(Prefix.getPrefix() + ChatColor.GREEN + "- " + material.name());
+                                blocks.add(material.toString());
                             }
+                            p.sendMessage(Prefix.getPrefix() + ChatColor.GREEN + "Blocks in the " + ChatColor.GRAY + "blacklist :");
+                            p.sendMessage(Prefix.getPrefix() +ChatColor.YELLOW + "  " + String.join(", ",blocks));
                         } else {
                             p.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Usage: /fk block list !");
                         }

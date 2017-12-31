@@ -15,6 +15,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main extends JavaPlugin {
 
     public static IconMenu menu;
@@ -23,20 +26,22 @@ public class Main extends JavaPlugin {
     private static PluginLangFile fileText;
     private static final Plugin pl = Bukkit.getPluginManager().getPlugin("FallenKingdoms");
 
-    public static PluginFile getConfigFile() {
+    public static PluginFile getConfigFile () {
         return fileConfig;
     }
 
-    public static PluginFile getBlockFile() {
+    public static PluginFile getBlockFile () {
         return fileBlock;
     }
 
-    public static PluginFile getLangFile() { return fileText; }
+    public static PluginFile getLangFile () {
+        return fileText;
+    }
 
-    public void onEnable() {
+    public void onEnable () {
         //handle commands
         CommandExecutor ce = new FkCommand();
-      getCommand("fk").setExecutor(ce);
+        getCommand("fk").setExecutor(ce);
 
         //map events
         Bukkit.getPluginManager().registerEvents(new JoinEvent(), this);
@@ -51,34 +56,38 @@ public class Main extends JavaPlugin {
         new PluginLangFile(this, "fr-be.yml", "fr-be.yml");
         new PluginLangFile(this, "en-uk.yml", "en-uk.yml");
 
-        //Load files
-        fileConfig = new PluginFile(this, "config.yml", "config.yml");
-        fileBlock = new PluginFile(this, "blocklist.yml", "blocklist.yml");
-        fileText = new PluginLangFile(this, getConfigFile().getString("lang") + ".yml");
-
         //print messages in Admin consoles
-        Console.log(ChatColor.DARK_RED + "[IMPORTANT] Ne pas oublier de configurer les coordonées des bases !");
-        Console.log(ChatColor.DARK_RED + "            Pour cela il vous faudrat éteindre le serveur !");
+        Console.log(ChatColor.DARK_RED + "[IMPORTANT] Do not forget to setup bases locations !");
+        Console.log(ChatColor.DARK_RED + "            Reloading the plugin is needed after that !");
         Console.log(ChatColor.YELLOW + "Developped by:" + ChatColor.WHITE + " MinerBigWhale, " + ChatColor.YELLOW + " inspired by:" + ChatColor.WHITE + " TeaB0" + ChatColor.YELLOW + "'s plugin");
 
-        //Load Base objects
+        Console.log(ChatColor.YELLOW + "Loading " + ChatColor.BLUE + "'config.yml'");
+        fileConfig = new PluginFile(this, "config.yml", "config.yml");
         for (String baseName : fileConfig.getConfigurationSection("BaseList").getKeys(false)) {
             if (fileConfig.getBoolean("BaseList." + baseName)) {
                 Game.addBase(new Base(baseName));
             }
         }
 
-        //Load Blocks
+        ArrayList<String>  blocks = new ArrayList<String>();
+        Console.log(ChatColor.YELLOW + "Loading " + ChatColor.BLUE + "'blocklist.yml'");
+        fileBlock = new PluginFile(this, "blocklist.yml", "blocklist.yml");
         for (String materialName : fileBlock.getConfigurationSection("blocklist").getKeys(false)) {
-            if (fileBlock.getBoolean(materialName)) {
+            if (fileBlock.getBoolean("blocklist." + materialName)) {
                 Game.addBlock(materialName);
+                blocks.add(materialName);
             }
         }
+        Console.log(ChatColor.GREEN + "Blocks added to the " + ChatColor.GRAY + "blacklist :");
+        Console.log(ChatColor.YELLOW + "  " + String.join(", ",blocks));
+
+        Console.log(ChatColor.YELLOW + "Loading " + ChatColor.BLUE + "'"+ fileConfig.getString("lang") + ".yml'");
+        fileText = new PluginLangFile(this, fileConfig.getString("lang") + ".yml");
 
         Console.log(ChatColor.GREEN + " [ON] Plugin switched on !");
     }
 
-    public void onDisable() {
+    public void onDisable () {
         //Clear Game's objects
         Game.clearAll();
         if (Game.isRunning()) Timer.stopFk(this);
