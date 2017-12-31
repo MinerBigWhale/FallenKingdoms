@@ -10,11 +10,24 @@ import java.util.Arrays;
 
 public class IconMenu implements org.bukkit.event.Listener {
 
-    public String name;
-    public int size;
+    private String name;
 
-    public String[] optionNames;
-    public ItemStack[] optionIcons;
+    public String getName () {
+        return name;
+    }
+
+    public int getSize () {
+        return size;
+    }
+
+    public String[] getOptionNames () {
+        return optionNames;
+    }
+
+    private int size;
+
+    private String[] optionNames;
+    private ItemStack[] optionIcons;
 
     public IconMenu createIconMenu(String name, int size) {
         this.name = name;

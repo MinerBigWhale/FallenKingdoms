@@ -61,5 +61,6 @@ restriction:
 
 joinmenu:
   title: "Selectionnez une équipe"
+  team: "Rejoindre l'équipe "
   leave: "Spectateur"
 
