@@ -9,12 +9,12 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 
 public class MenuEvent implements org.bukkit.event.Listener {
     @EventHandler
-    void onInventoryClick(InventoryClickEvent e) {
-        if (e.getInventory().getTitle().equals(Main.menu.name)) {
-            e.setCancelled(true);
-            int slot = e.getRawSlot();
+    void onInventoryClick(InventoryClickEvent inventoryEvent) {
+        if (inventoryEvent.getInventory().getTitle().equals(Main.menu.name)) {
+            inventoryEvent.setCancelled(true);
+            int slot = inventoryEvent.getRawSlot();
             if (slot >= 0 && slot < Main.menu.size && Main.menu.optionNames[slot] != null) {
-                Player player = (Player) e.getWhoClicked(); // The player that clicked the item
+                Player player = (Player) inventoryEvent.getWhoClicked(); // The player that clicked the item
                 String clicked = Main.menu.optionNames[slot]; // The item that was clicked
                 for (Base base : Game.getBases()) {
                     if (!base.hasPlayer(player) && base.getName().equalsIgnoreCase(clicked)) {
@@ -23,7 +23,7 @@ public class MenuEvent implements org.bukkit.event.Listener {
                         base.removePlayer(player);
                     }
                 }
-                final Player p = (Player) e.getWhoClicked();
+                Player p = (Player) inventoryEvent.getWhoClicked();
 
                 p.closeInventory();
                 Main.menu.destroy();

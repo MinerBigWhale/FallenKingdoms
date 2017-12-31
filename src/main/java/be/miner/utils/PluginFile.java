@@ -20,9 +20,9 @@ public class PluginFile extends YamlConfiguration {
     }
 
     public PluginFile(JavaPlugin plugin, String fileName, String fromFileName) {
-        setPlugin(plugin);
-        setFile(new File(plugin.getDataFolder(), fileName));
-        setFromFileFile(fromFileName);
+        this.plugin = plugin;
+        file = new File(plugin.getDataFolder(), fileName);
+        fromFile = fromFileName;
         reload();
     }
 
@@ -34,7 +34,7 @@ public class PluginFile extends YamlConfiguration {
     }
 
     protected void setFromFileFile(String fromFileName) {
-        this.fromFile = fromFileName;
+        fromFile = fromFileName;
     }
 
     protected void setPlugin(JavaPlugin plugin) {
@@ -44,19 +44,17 @@ public class PluginFile extends YamlConfiguration {
     public void reload() {
 
         //create folders and files
-        if (!this.file.exists()) {
+        if (!file.exists()) {
             try {
-                boolean mkdirs = this.file.getParentFile().mkdirs();
-                boolean newFile = this.file.createNewFile();
+                boolean mkdirs = file.getParentFile().mkdirs();
+                boolean newFile = file.createNewFile();
                 //fill with default content if needed
-                if (fromFile != null && this.plugin != null) {
-                    InputStream in = this.plugin.getResource(this.fromFile);
+                if (fromFile != null && plugin != null) {
+                    InputStream in = plugin.getResource(fromFile);
                     if (in == null) {
                         throw new NullPointerException();
                     }
-                    InputStreamReader reader = new InputStreamReader(in);
-                    PrintWriter writer = new PrintWriter(this.file);
-                    try {
+                    try (InputStreamReader reader = new InputStreamReader(in); PrintWriter writer = new PrintWriter(file)) {
                         int readBytes;
                         char[] buffer = new char[4096];
                         while ((readBytes = reader.read(buffer)) > 0) {
@@ -64,38 +62,32 @@ public class PluginFile extends YamlConfiguration {
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
-                        Console.log("An error occured while filling file " + this.file.getName());
-                    } finally {
-                        reader.close();
-                        writer.close();
+                        Console.log("An error occured while filling file " + file.getName());
                     }
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                Console.log("An error occured while creating file " + this.file.getName());
+                Console.log("An error occured while creating file " + file.getName());
             }
         }
 
         //reload file content to memory
         try {
-            load(this.file);
-            if (fromFile != null && this.plugin != null) {
-                InputStreamReader reader = new InputStreamReader(this.plugin.getResource(this.fromFile));
-                try {
+            load(file);
+            if (fromFile != null && plugin != null) {
+                try (InputStreamReader reader = new InputStreamReader(plugin.getResource(fromFile))) {
                     FileConfiguration defaultsConfig = YamlConfiguration.loadConfiguration(reader);
 
                     setDefaults(defaultsConfig);
                     options().copyDefaults(true);
                 } catch (Exception e) {
                     e.printStackTrace();
-                    Console.log("An error occured while reloading file in memory " + this.file.getName());
-                } finally {
-                    reader.close();
+                    Console.log("An error occured while reloading file in memory " + file.getName());
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
-            Console.log("An error occured while reloading file in memory " + this.file.getName());
+            Console.log("An error occured while reloading file in memory " + file.getName());
         }
     }
 
@@ -103,10 +95,10 @@ public class PluginFile extends YamlConfiguration {
     public void save() {
         try {
             options().indent(2);
-            save(this.file);
+            save(file);
         } catch (Exception e) {
             e.printStackTrace();
-            Console.log("An error occured while saving file " + this.file.getName());
+            Console.log("An error occured while saving file " + file.getName());
         }
     }
 }

@@ -6,16 +6,16 @@ import org.bukkit.Particle;
 import org.bukkit.plugin.Plugin;
 
 public class RegionHighlighter {
-    private Plugin pl = Bukkit.getPluginManager().getPlugin("FallenKingdoms");
-    private int _r = 0, _g = 0, _b = 0;
-    private Location _center;
-    private double _hLimit;
-    private double _vLimit;
+    private final Plugin pl = Bukkit.getPluginManager().getPlugin("FallenKingdoms");
+    private int _r, _g, _b;
+    private final Location _center;
+    private final double _hLimit;
+    private final double _vLimit;
     private int _taskId;
     private int _blockId;
-    private boolean _showState = false;
-    private double _granularity = 0.5;
-    private double _offset = 0.5;
+    private boolean _showState;
+    private static final double _granularity = 0.5;
+    private static final double _offset = 0.5;
 
     private double ax, ay, az;
     private double bx, by, bz;

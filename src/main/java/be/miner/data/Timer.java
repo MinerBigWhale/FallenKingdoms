@@ -15,7 +15,7 @@ import java.util.HashMap;
 
 public class Timer {
     public static int taskId;
-    private static Plugin pl = Bukkit.getPluginManager().getPlugin("FallenKingdoms");
+    private static final Plugin pl = Bukkit.getPluginManager().getPlugin("FallenKingdoms");
     private static int _startTimer;
     private static int _stopTimer;
     private static int _taskIdStart;
@@ -32,22 +32,24 @@ public class Timer {
 
     public static String getTotalTime() {
         int seconds = _totalSecond % 60;
-        int minutes = _totalSecond / 60;
-        String sseconds = "" + seconds;
-        String sminutes = "" + minutes;
-        if (seconds < 10) sseconds = "0" + seconds;
-        if (minutes < 10) sminutes = "0" + minutes;
-        return sminutes + ":" + sseconds;
+        int minutes = _totalSecond / 60 % 20;
+        int days = _totalSecond / 60 / 20;
+        String sseconds = String.valueOf(seconds);
+        String sminutes = String.valueOf(minutes);
+        String sdays = String.valueOf(days + 1);
+        if (seconds < 10) sseconds = "0" + sseconds;
+        if (minutes < 10) sminutes = "0" + sminutes;
+        return "D" + sdays + " " + sminutes + ":" + sseconds;
     }
 
     public static String getToPvpTime() {
         if (_toPvp <= 0) {
-            return ChatColor.GREEN + " Activé";
+            return ChatColor.GREEN + " On";
         }
         int seconds = _toPvp % 60;
         int minutes = _toPvp / 60;
-        String sseconds = "" + seconds;
-        String sminutes = "" + minutes;
+        String sseconds = String.valueOf(seconds);
+        String sminutes = String.valueOf(minutes);
         if (seconds < 10) sseconds = "0" + seconds;
         if (minutes < 10) sminutes = "0" + minutes;
         return sminutes + ":" + sseconds;
@@ -55,12 +57,12 @@ public class Timer {
 
     public static String getToAssaultTime() {
         if (_toAssault <= 0) {
-            return ChatColor.GREEN + " Activé";
+            return ChatColor.GREEN + " On";
         }
         int seconds = _toAssault % 60;
         int minutes = _toAssault / 60;
-        String sseconds = "" + seconds;
-        String sminutes = "" + minutes;
+        String sseconds = String.valueOf(seconds);
+        String sminutes = String.valueOf(minutes);
         if (seconds < 10) sseconds = "0" + seconds;
         if (minutes < 10) sminutes = "0" + minutes;
         return sminutes + ":" + sseconds;
@@ -80,7 +82,7 @@ public class Timer {
             if (_startTimer == 0) {
                 Bukkit.getWorld(Main.getConfigFile().getString("world")).setTime(0L);
                 Game.pause(false);
-                Console.broadcast("" + ChatColor.YELLOW + ChatColor.BOLD + Main.getLangFile().getString("message.startgame"));
+                Console.broadcast(String.valueOf(ChatColor.YELLOW) + ChatColor.BOLD + Main.getLangFile().getString("message.startgame"));
                 updateTimer();
                 Game.start();
                 Bukkit.getWorld(Main.getConfigFile().getString("world")).setTime(0);
@@ -89,7 +91,7 @@ public class Timer {
                     for (Base base : Game.getBases()) {
                         if (base.hasPlayer(players)) {
                             players.setGameMode(GameMode.SURVIVAL);
-                            Location loc = new org.bukkit.Location(base.getWorld(), base.getX(), base.getY(), base.getZ());
+                            Location loc = new Location(base.getWorld(), base.getX(), base.getY(), base.getZ());
                             players.teleport(loc);
                         }
                     }
@@ -158,7 +160,7 @@ public class Timer {
         return _scoreboard;
     }
 
-    protected static void stopTimer() {
+    private static void stopTimer() {
         Bukkit.getScheduler().cancelTask(taskId);
         //reset variables
         _startTimer = Main.getConfigFile().getInt("startTimer");
@@ -174,6 +176,7 @@ public class Timer {
         getScoreBoard().updateInfoValue();
         getScoreBoard().updateBaseValue();
         getScoreBoard().update();
+        getScoreBoard().close();
     }
 
     public static void checkPlayerDistribution() {
@@ -181,7 +184,7 @@ public class Timer {
         //Distribute undecided players
 
         try {
-            HashMap<String, Player> players = new HashMap<String, Player>();
+            HashMap<String, Player> players = new HashMap<>();
             for (Player player : Bukkit.getOnlinePlayers()) {
                 players.put(player.getName(), player);
                 Console.log(ChatColor.BLUE + "- " + player.getName() + "is online");
@@ -202,7 +205,7 @@ public class Timer {
         try {
             Console.broadcast( ChatColor.GREEN + Main.getLangFile().getString("message.balanceteam"));
             //equilibrate base load
-            HashMap<String, Player> players = new HashMap<String, Player>();
+            HashMap<String, Player> players = new HashMap<>();
             for (Player player : Bukkit.getOnlinePlayers()) {
                 players.put(player.getName(), player);
                 Console.log(ChatColor.BLUE + "- " + player.getName() + "is online");

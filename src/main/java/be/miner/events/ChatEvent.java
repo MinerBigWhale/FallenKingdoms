@@ -9,10 +9,10 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class ChatEvent implements org.bukkit.event.Listener {
     @org.bukkit.event.EventHandler
-    public void onChat(AsyncPlayerChatEvent e) {
-        Player player = e.getPlayer();
-        String msg = e.getMessage();
-        e.setCancelled(true);
+    public void onChat(AsyncPlayerChatEvent chatEvent) {
+        Player player = chatEvent.getPlayer();
+        String msg = chatEvent.getMessage();
+        chatEvent.setCancelled(true);
         boolean printed = false;
         if (Game.isRunning()) {
             if (msg.startsWith("!")) {
@@ -28,7 +28,7 @@ public class ChatEvent implements org.bukkit.event.Listener {
                     if (base.hasPlayer(player)) {
                         printed = true;
                         for (Player players : base.getPlayers()) {
-                            players.sendMessage("" + ChatColor.ITALIC + ChatColor.GRAY + "[" + player.getDisplayName() + "] " + ChatColor.WHITE + msg);
+                            players.sendMessage(String.valueOf(ChatColor.ITALIC) + ChatColor.GRAY + "[" + player.getDisplayName() + "] " + ChatColor.WHITE + msg);
                         }
                         continue;
                     }

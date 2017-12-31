@@ -5,6 +5,7 @@ import be.miner.Main;
 import be.miner.data.Base;
 import be.miner.data.Game;
 import be.miner.data.Timer;
+//import be.miner.utils.Console;
 import be.miner.utils.Console;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -21,7 +22,7 @@ public class CustomBoard {
     private final String[] strings = new String[15];
     private String[] _baseStrings;
     private String[] _timeStrings;
-    private final HashMap<String, String[]> _infoStrings = new HashMap<String, String[]>();
+    private final HashMap<String, String[]> _infoStrings = new HashMap<>();
 
     public CustomBoard() {
         close();
@@ -57,7 +58,6 @@ public class CustomBoard {
         _timeStrings[index] = ChatColor.YELLOW + "PvP: " + ChatColor.AQUA + Timer.getToPvpTime();
         index++;
         _timeStrings[index] = ChatColor.YELLOW + "Clash: " + ChatColor.AQUA + Timer.getToAssaultTime();
-        index++;
         return this;
     }
 
@@ -95,24 +95,22 @@ public class CustomBoard {
         //prepare building Scoreboard
         int index = 0;
 
-        for (int xedni = 0; xedni < _baseStrings.length; xedni++) {
+        for (String baseString : _baseStrings) {
             index++;
-            strings[index] = _baseStrings[xedni];
+            strings[index] = baseString;
         }
-        for (int xedni = 0; xedni < _timeStrings.length; xedni++) {
+        for (String timeString : _timeStrings) {
             index++;
-            strings[index] = _timeStrings[xedni];
+            strings[index] = timeString;
         }
-        for (int xedni = 0; xedni < _infoStrings.get(player.getName()).length; xedni++) {
+        for (String infoString: _infoStrings.get(player.getName())) {
             index++;
-            strings[index] = _infoStrings.get(player.getName())[xedni];
+            strings[index] = infoString;
         }
 
         //creating and affect Scoreboard
         Scoreboard scoreboard = player.getScoreboard();
-        if (scoreboard == null) {
-            scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
-        }
+        if (scoreboard == null) scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
         String objectivename = ("FK" + player.getName() + "00000000000000").substring(0, 16);
         Objective objective = scoreboard.getObjective(objectivename);
         if (objective == null) {
@@ -123,7 +121,7 @@ public class CustomBoard {
         if (Game.isRunning()) {
             for (int scorepos = -1; scorepos >= 0 - index; scorepos--) {
                 String teamname = ("TE" + scorepos + "AAAAAAAAAAAAAA").substring(0, 16);
-                String entry = ChatColor.values()[-scorepos % 16] + "";
+                String entry = String.valueOf(ChatColor.values()[-scorepos % 16]);
                 Team team = scoreboard.getTeam(teamname);
                 if (team == null) {
                     team = scoreboard.registerNewTeam(teamname);

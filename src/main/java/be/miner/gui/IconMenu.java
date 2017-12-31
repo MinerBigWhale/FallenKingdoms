@@ -19,8 +19,8 @@ public class IconMenu implements org.bukkit.event.Listener {
     public IconMenu createIconMenu(String name, int size) {
         this.name = name;
         this.size = size;
-        this.optionNames = new String[size];
-        this.optionIcons = new ItemStack[size];
+        optionNames = new String[size];
+        optionIcons = new ItemStack[size];
         return this;
     }
 

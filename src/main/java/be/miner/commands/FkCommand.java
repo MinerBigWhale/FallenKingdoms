@@ -17,7 +17,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
 public class FkCommand implements CommandExecutor {
-    private static Plugin pl = Bukkit.getPluginManager().getPlugin("FallenKingdoms");
+    private static final Plugin _pl = Bukkit.getPluginManager().getPlugin("FallenKingdoms");
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         Player p = (Player) sender;
@@ -26,7 +26,7 @@ public class FkCommand implements CommandExecutor {
                 if (args.length == 1) {
                     if (p.hasPermission("fk.start")) {
                         if (!Game.isRunning()) {
-                            Timer.startFk(pl);
+                            Timer.startFk(_pl);
                         } else {
                             Console.broadcast( ChatColor.RED + Main.getLangFile().getString("error.alreadystarted"));
                         }
@@ -39,7 +39,7 @@ public class FkCommand implements CommandExecutor {
             } else if (args[0].equalsIgnoreCase("stop")) {
                 if (args.length == 1) {
                     if (p.hasPermission("fk.stop")) {
-                        Timer.stopFk(pl);
+                        Timer.stopFk(_pl);
                     } else {
                         p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.nopermission"));
                     }

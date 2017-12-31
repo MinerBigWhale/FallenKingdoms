@@ -10,35 +10,11 @@ public class Particule {
     private double _red = 0.001;
     private double _green = 0.001;
     private double _blue = 0.001;
-    private double _xOffset = 0;
-    private double _yOffset = 0;
-    private double _zOffset = 0;
+    private double _xOffset;
+    private double _yOffset;
+    private double _zOffset;
     private int _particuleData;
     private int _particuleMetaData;
-
-    public Particule(Particle particule, int particuleData, int particuleMetaData) {
-        create(particule, 0, 0, 0, particuleData, particuleMetaData);
-    }
-
-    public Particule(Particle particule, int particuleData) {
-        create(particule, 0, 0, 0, particuleData, 0);
-    }
-
-    public Particule(Particle particule) {
-        create(particule, 0, 0, 0, 0, 0);
-    }
-
-    public Particule(Particle particule, Location location, float xOffset, float yOffset, float zOffset, int particuleData, int particuleMetaData) {
-        create(particule, xOffset, yOffset, zOffset, particuleData, particuleMetaData);
-    }
-
-    public Particule(Particle particule, Location location, float xOffset, float yOffset, float zOffset, int particuleData) {
-        create(particule, xOffset, yOffset, zOffset, particuleData, 0);
-    }
-
-    public Particule(Particle particule, float xOffset, float yOffset, float zOffset) {
-        create(particule, xOffset, yOffset, zOffset, 0, 0);
-    }
 
     public Particule(Particle colorableParticule, int R, int G, int B) {
         if (colorableParticule != Particle.SPELL_MOB && colorableParticule != Particle.SPELL_MOB_AMBIENT && colorableParticule != Particle.REDSTONE) {
@@ -68,6 +44,32 @@ public class Particule {
         return (value - fromOrigin) / (toOrigin - fromOrigin) * (toDest - fromDest) + fromDest;
     }
 
+    //TODO: spawn normal particule
+    /*
+    public Particule(Particle particule, int particuleData, int particuleMetaData) {
+        create(particule, 0, 0, 0, particuleData, particuleMetaData);
+    }
+
+    public Particule(Particle particule, int particuleData) {
+        create(particule, 0, 0, 0, particuleData, 0);
+    }
+
+    public Particule(Particle particule) {
+        create(particule, 0, 0, 0, 0, 0);
+    }
+
+    public Particule(Particle particule, Location location, float xOffset, float yOffset, float zOffset, int particuleData, int particuleMetaData) {
+        create(particule, xOffset, yOffset, zOffset, particuleData, particuleMetaData);
+    }
+
+    public Particule(Particle particule, Location location, float xOffset, float yOffset, float zOffset, int particuleData) {
+        create(particule, xOffset, yOffset, zOffset, particuleData, 0);
+    }
+
+    public Particule(Particle particule, float xOffset, float yOffset, float zOffset) {
+        create(particule, xOffset, yOffset, zOffset, 0, 0);
+    }
+
     private void create(Particle particule, float xOffset, float yOffset, float zOffset, int particuleData, int particuleMetaData) {
         _particule = particule;
         _particuleData = particuleData;
@@ -81,9 +83,9 @@ public class Particule {
         world.spawnParticle(_particule, location.getX(), location.getY(), location.getZ(), 0, _red, _green, _blue, 1);
     }
 
-    //TODO: spawn normal particule
 
     public void spawn(Player player, Location location) {
         player.spawnParticle(_particule, location.getX(), location.getY(), location.getZ(), 0, _red, _green, _blue, 1);
     }
+    */
 }

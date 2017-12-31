@@ -12,15 +12,15 @@ import org.bukkit.event.block.BlockPlaceEvent;
 
 public class BlockEvent implements org.bukkit.event.Listener {
     @org.bukkit.event.EventHandler
-    public void onBreakEvent(BlockBreakEvent e) {
-        Player player = e.getPlayer();
-        Block block = e.getBlock();
+    public void onBreakEvent(BlockBreakEvent breakEvent) {
+        Player player = breakEvent.getPlayer();
+        Block block = breakEvent.getBlock();
         Location loc = block.getLocation();
 
         double x = loc.getX();
         double z = loc.getZ();
         if (Game.isPaused()) {
-            e.setCancelled(true);
+            breakEvent.setCancelled(true);
             player.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("restriction.breakblockpause"));
             return;
         }
@@ -33,7 +33,7 @@ public class BlockEvent implements org.bukkit.event.Listener {
                             if (!base.hasPlayer(player)) {
                                 if ((x > base.getNegativeX() && x < base.getPositiveX() && z > base.getNegativeZ() && z < base.getPositiveZ())) {
                                     //block if all of this true
-                                    e.setCancelled(true);
+                                    breakEvent.setCancelled(true);
                                     player.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("restriction.breakblockbase"));
                                     return;
                                 }
@@ -43,21 +43,20 @@ public class BlockEvent implements org.bukkit.event.Listener {
                 }
             }
         }
-        e.setCancelled(false);
-        return;
+        breakEvent.setCancelled(false);
     }
 
     @org.bukkit.event.EventHandler
-    public void onPlaceEvent(BlockPlaceEvent e) {
-        Player player = e.getPlayer();
-        Block block = e.getBlock();
+    public void onPlaceEvent(BlockPlaceEvent placeEvent) {
+        Player player = placeEvent.getPlayer();
+        Block block = placeEvent.getBlock();
         Location loc = block.getLocation();
 
         double x = loc.getX();
         double z = loc.getZ();
         double y = loc.getY();
         if (Game.isPaused()) {
-            e.setCancelled(true);
+            placeEvent.setCancelled(true);
             player.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("restriction.placeblockpause"));
             return;
         }
@@ -84,7 +83,7 @@ public class BlockEvent implements org.bukkit.event.Listener {
                             if (base.hasPlayer(player)) {
                                 if (!(x > base.getNegativeX() && x < base.getPositiveX() && z > base.getNegativeZ() && z < base.getPositiveZ())) {
                                     //block if all of this true
-                                    e.setCancelled(true);
+                                    placeEvent.setCancelled(true);
                                     player.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("restriction.placeblockbase"));
                                     return;
                                 }
@@ -94,7 +93,6 @@ public class BlockEvent implements org.bukkit.event.Listener {
                 }
             }
         }
-        e.setCancelled(false);
-        return;
+        placeEvent.setCancelled(false);
     }
 }

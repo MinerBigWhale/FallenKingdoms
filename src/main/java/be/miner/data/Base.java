@@ -20,15 +20,22 @@ public class Base {
     private String _color;
     private ChatColor _chatColor;
     private byte _colorByte;
-    private String _name;
-    private double _x, _y, _z;
-    private double _size;
-    private World _world;
+    private final String _name;
+    private final double _x;
+    private final double _y;
+    private final double _z;
+    private final double _size;
+    private final World _world;
     private Team _team;
-    private Scoreboard _scoreboard;
-    private RegionHighlighter _regionHighLighter;
-    private double _xPositive, _zPositive, _yPositive, _xNegative, _zNegative, _yNegative;
-    private HashMap<String, Player> _players = new HashMap<String, Player>();
+    private final Scoreboard _scoreboard;
+    private final RegionHighlighter _regionHighLighter;
+    private final double _xPositive;
+    private final double _zPositive;
+    private final double _yPositive;
+    private final double _xNegative;
+    private final double _zNegative;
+    private final double _yNegative;
+    private final HashMap<String, Player> _players = new HashMap<String, Player>();
 
     public Base(String color) {
         this(color, color);
@@ -85,14 +92,14 @@ public class Base {
             _team.setDisplayName(_chatColor + _name);
             _team.setAllowFriendlyFire(Main.getConfigFile().getBoolean("friendlyFire"));
             _team.setCanSeeFriendlyInvisibles(Main.getConfigFile().getBoolean("canSeeFriendlyInvisible"));
-            _team.setPrefix(_chatColor + "");
+            _team.setPrefix(String.valueOf(_chatColor));
         } catch (Exception e) {
             _scoreboard.registerNewTeam(_name);
             _team = _scoreboard.getTeam(_name);
             _team.setDisplayName(_chatColor + _name);
             _team.setAllowFriendlyFire(Main.getConfigFile().getBoolean("friendlyFire"));
             _team.setCanSeeFriendlyInvisibles(Main.getConfigFile().getBoolean("canSeeFriendlyInvisible"));
-            _team.setPrefix(_chatColor + "");
+            _team.setPrefix(String.valueOf(_chatColor));
         }
 
         //Setup Region HighLighter
@@ -159,8 +166,6 @@ public class Base {
         return _yNegative;
     }
 
-    //Players
-    //------
     public ArrayList<Player> getPlayers() {
         return new ArrayList<Player>(_players.values());
     }
@@ -196,7 +201,7 @@ public class Base {
         return plocation.distance(new Location(_world, _x, plocation.getY(), _z));
     }
 
-    public double calculAngle(Location block, Location player) {
+    private double calculAngle (Location block, Location player) {
         Vector vector = player.toVector().subtract(block.toVector());
         block = new Location(_world, _x, _y, _z).setDirection(vector);
 
@@ -236,7 +241,8 @@ public class Base {
     public String getDirectionString(Player player) {
 
         if (getDistance(player) <= _size / 2) {
-            return "⭘";
+            return "❂";
+            //return "⭘";
         }
         Location plocation = player.getLocation();
         Location blocation = new Location(_world, _x, _y, _z);
@@ -260,7 +266,9 @@ public class Base {
         } else if (angle > 292.5 && angle <= 337.5) {
             return "⬂";
         } else {
-            return "⤬";//"❂";
+            return "⤬";
+            //return "❂";
+            //return "⭘";
         }
     }
 

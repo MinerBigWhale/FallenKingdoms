@@ -11,19 +11,19 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 
 public class DamageEvent implements Listener {
-    private FileConfiguration config = org.bukkit.Bukkit.getPluginManager().getPlugin("FallenKingdoms").getConfig();
+    private final FileConfiguration config = org.bukkit.Bukkit.getPluginManager().getPlugin("FallenKingdoms").getConfig();
 
     @EventHandler
-    public void onDamage(EntityDamageByEntityEvent e) {
-        if (((e.getDamager() instanceof Player)) && ((e.getEntity() instanceof Player))) {
-            Player killer = (Player) e.getDamager();
-            Player victime = (Player) e.getEntity();
-            if (Timer.getJours() < this.config.getInt("pvpDay")) {
+    public void onDamage(EntityDamageByEntityEvent damageEvent) {
+        if (((damageEvent.getDamager() instanceof Player)) && ((damageEvent.getEntity() instanceof Player))) {
+            Player killer = (Player) damageEvent.getDamager();
+            Player victime = (Player) damageEvent.getEntity();
+            if (Timer.getJours() < config.getInt("pvpDay")) {
                 killer.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("message.cannothurt"));
-                e.setDamage(0.0D);
-                e.setCancelled(true);
+                damageEvent.setDamage(0.0D);
+                damageEvent.setCancelled(true);
             } else {
-                e.setCancelled(false);
+                damageEvent.setCancelled(false);
             }
         }
     }

@@ -21,7 +21,7 @@ public class Main extends JavaPlugin {
     private static PluginFile fileConfig;
     private static PluginFile fileBlock;
     private static PluginLangFile fileText;
-    private static Plugin pl = Bukkit.getPluginManager().getPlugin("FallenKingdoms");
+    private static final Plugin pl = Bukkit.getPluginManager().getPlugin("FallenKingdoms");
 
     public static PluginFile getConfigFile() {
         return fileConfig;
@@ -36,7 +36,7 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         //handle commands
         CommandExecutor ce = new FkCommand();
-        getCommand("fk").setExecutor(ce);
+      getCommand("fk").setExecutor(ce);
 
         //map events
         Bukkit.getPluginManager().registerEvents(new JoinEvent(), this);
@@ -62,15 +62,15 @@ public class Main extends JavaPlugin {
         Console.log(ChatColor.YELLOW + "Developped by:" + ChatColor.WHITE + " MinerBigWhale, " + ChatColor.YELLOW + " inspired by:" + ChatColor.WHITE + " TeaB0" + ChatColor.YELLOW + "'s plugin");
 
         //Load Base objects
-        for (String baseName : getConfigFile().getConfigurationSection("BaseList").getKeys(false)) {
-            if (getConfigFile().getBoolean("BaseList." + baseName)) {
+        for (String baseName : fileConfig.getConfigurationSection("BaseList").getKeys(false)) {
+            if (fileConfig.getBoolean("BaseList." + baseName)) {
                 Game.addBase(new Base(baseName));
             }
         }
 
         //Load Blocks
-        for (String materialName : getBlockFile().getConfigurationSection("blocklist").getKeys(false)) {
-            if (getBlockFile().getBoolean(materialName)) {
+        for (String materialName : fileBlock.getConfigurationSection("blocklist").getKeys(false)) {
+            if (fileBlock.getBoolean(materialName)) {
                 Game.addBlock(materialName);
             }
         }
@@ -81,7 +81,7 @@ public class Main extends JavaPlugin {
     public void onDisable() {
         //Clear Game's objects
         Game.clearAll();
-        Timer.stopFk(this);
+        if (Game.isRunning()) Timer.stopFk(this);
         Console.log(ChatColor.RED + " [OFF] Plugin switched off !");
     }
 }

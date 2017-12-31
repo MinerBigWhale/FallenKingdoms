@@ -8,14 +8,11 @@ import org.bukkit.Material;
 import java.util.ArrayList;
 
 public class Game {
-    //Time
-    //-----
+
     private static Boolean _run = false;
     private static Boolean _pause = false;
-    //Bases
-    private static ArrayList<Base> _bases = new ArrayList<>();
-    //Blocks
-    private static ArrayList<Material> _blocks = new ArrayList<>();
+    private static final ArrayList<Base> _bases = new ArrayList<>();
+    private static final ArrayList<Material> _blocks = new ArrayList<>();
 
     public static Boolean isRunning() {
         return _run;
@@ -32,9 +29,6 @@ public class Game {
     public static void stop() {
         _run = false;
     }
-
-    //Data
-    //-----
 
     public static void pause() {
         _pause = !_pause;
@@ -53,7 +47,7 @@ public class Game {
     }
 
     public static ArrayList<String> getBasesName() {
-        ArrayList<String> ret = new ArrayList<String>();
+        ArrayList<String> ret = new ArrayList<>();
         for (Base base : _bases)
             ret.add(base.getName());
         return ret;
@@ -123,9 +117,6 @@ public class Game {
         _blocks.clear();
     }
 
-
-    //ClearAll()
-    //==========
     public static void clearAll() {
         _run = false;
         _pause = false;
