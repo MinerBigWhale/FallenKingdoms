@@ -2,6 +2,7 @@ package be.miner.events;
 
 import be.miner.data.Base;
 import be.miner.data.Game;
+import be.miner.utils.Message;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -28,7 +29,7 @@ public class ChatEvent implements org.bukkit.event.Listener {
                     if (base.hasPlayer(player)) {
                         printed = true;
                         for (Player players : base.getPlayers()) {
-                            players.sendMessage(String.valueOf(ChatColor.ITALIC) + ChatColor.GRAY + "[" + player.getDisplayName() + "] " + ChatColor.WHITE + msg);
+                            Message.send(players, String.valueOf(ChatColor.ITALIC) + ChatColor.GRAY + "[" + player.getDisplayName() + "] " + ChatColor.WHITE + msg);
                         }
                         continue;
                     }

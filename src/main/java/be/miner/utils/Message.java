@@ -10,5 +10,5 @@ public class Message {
     public static void broadcast (String message) {
         Bukkit.broadcastMessage(Prefix.getPrefix() + message);
     }
-    public static void send (Player player, String message) { Message.send(player, message); }
+    public static void send (Player player, String message) { player.sendMessage(Prefix.getPrefix() + player); }
 }

@@ -300,13 +300,13 @@ public class Base {
     public void isIn(Player player){
         if (_insiders.contains(player)) return;
         _insiders.add(player);
-        player.sendMessage(Prefix.getPrefix()+ ChatColor.GREEN + Main.getLangFile().getString("message.playerenterbase") + getNameString());
+        Message.send(player , ChatColor.GREEN + Main.getLangFile().getString("message.playerenterbase") + getNameString());
     }
 
     public void isOut(Player player){
         if (!_insiders.contains(player)) return;
         _insiders.remove(player);
-        player.sendMessage(Prefix.getPrefix()+ ChatColor.GREEN + Main.getLangFile().getString("message.playerleavebase") + getNameString());
+        Message.send(player ,ChatColor.GREEN + Main.getLangFile().getString("message.playerleavebase") + getNameString());
     }
 
 }
