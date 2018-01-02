@@ -6,7 +6,7 @@ import be.miner.data.Game;
 import be.miner.data.Timer;
 import be.miner.events.*;
 import be.miner.gui.IconMenu;
-import be.miner.utils.Console;
+import be.miner.utils.Message;
 import be.miner.utils.PluginFile;
 import be.miner.utils.PluginLangFile;
 import org.bukkit.Bukkit;
@@ -16,7 +16,6 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Main extends JavaPlugin {
 
@@ -57,11 +56,11 @@ public class Main extends JavaPlugin {
         new PluginLangFile(this, "en-uk.yml", "en-uk.yml");
 
         //print messages in Admin consoles
-        Console.log(ChatColor.DARK_RED + "[IMPORTANT] Do not forget to setup bases locations !");
-        Console.log(ChatColor.DARK_RED + "            Reloading the plugin is needed after that !");
-        Console.log(ChatColor.YELLOW + "Developped by:" + ChatColor.WHITE + " MinerBigWhale, " + ChatColor.YELLOW + " inspired by:" + ChatColor.WHITE + " TeaB0" + ChatColor.YELLOW + "'s plugin");
+        Message.log(ChatColor.DARK_RED + "[IMPORTANT] Do not forget to setup bases locations !");
+        Message.log(ChatColor.DARK_RED + "            Reloading the plugin is needed after that !");
+        Message.log(ChatColor.YELLOW + "Developped by:" + ChatColor.WHITE + " MinerBigWhale, " + ChatColor.YELLOW + " inspired by:" + ChatColor.WHITE + " TeaB0" + ChatColor.YELLOW + "'s plugin");
 
-        Console.log(ChatColor.YELLOW + "Loading " + ChatColor.BLUE + "'config.yml'");
+        Message.log(ChatColor.YELLOW + "Loading " + ChatColor.BLUE + "'config.yml'");
         fileConfig = new PluginFile(this, "config.yml", "config.yml");
         for (String baseName : fileConfig.getConfigurationSection("BaseList").getKeys(false)) {
             if (fileConfig.getBoolean("BaseList." + baseName)) {
@@ -70,7 +69,7 @@ public class Main extends JavaPlugin {
         }
 
         ArrayList<String>  blocks = new ArrayList<String>();
-        Console.log(ChatColor.YELLOW + "Loading " + ChatColor.BLUE + "'blocklist.yml'");
+        Message.log(ChatColor.YELLOW + "Loading " + ChatColor.BLUE + "'blocklist.yml'");
         fileBlock = new PluginFile(this, "blocklist.yml", "blocklist.yml");
         for (String materialName : fileBlock.getConfigurationSection("blocklist").getKeys(false)) {
             if (fileBlock.getBoolean("blocklist." + materialName)) {
@@ -78,19 +77,19 @@ public class Main extends JavaPlugin {
                 blocks.add(materialName);
             }
         }
-        Console.log(ChatColor.GREEN + "Blocks added to the " + ChatColor.GRAY + "blacklist :");
-        Console.log(ChatColor.YELLOW + "  " + String.join(", ",blocks));
+        Message.log(ChatColor.GREEN + "Blocks added to the " + ChatColor.GRAY + "blacklist :");
+        Message.log(ChatColor.YELLOW + "  " + String.join(", ",blocks));
 
-        Console.log(ChatColor.YELLOW + "Loading " + ChatColor.BLUE + "'"+ fileConfig.getString("lang") + ".yml'");
+        Message.log(ChatColor.YELLOW + "Loading " + ChatColor.BLUE + "'"+ fileConfig.getString("lang") + ".yml'");
         fileText = new PluginLangFile(this, fileConfig.getString("lang") + ".yml");
 
-        Console.log(ChatColor.GREEN + " [ON] Plugin switched on !");
+        Message.log(ChatColor.GREEN + " [ON] Plugin switched on !");
     }
 
     public void onDisable () {
         //Clear Game's objects
         Game.clearAll();
         if (Game.isRunning()) Timer.stopFk(this);
-        Console.log(ChatColor.RED + " [OFF] Plugin switched off !");
+        Message.log(ChatColor.RED + " [OFF] Plugin switched off !");
     }
 }

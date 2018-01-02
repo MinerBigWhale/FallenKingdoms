@@ -1,9 +1,8 @@
 package be.miner.data;
 
 import be.miner.Main;
-import be.miner.utils.Console;
+import be.miner.utils.Message;
 import be.miner.utils.PluginFile;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 
@@ -87,7 +86,7 @@ public class Game {
     public static void addBlock(String materialName) {
         Material material = Material.matchMaterial(materialName);
         if (material == null) {
-            Console.log(ChatColor.RED + "Can't find the material '" +ChatColor.YELLOW + materialName +ChatColor.RED + "', unable to add it !");
+            Message.log(ChatColor.RED + "Can't find the material '" +ChatColor.YELLOW + materialName +ChatColor.RED + "', unable to add it !");
             return;
         }
         addBlock(material);

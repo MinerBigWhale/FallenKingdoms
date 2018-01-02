@@ -3,6 +3,7 @@ package be.miner.events;
 import be.miner.Main;
 import be.miner.data.Base;
 import be.miner.data.Game;
+import be.miner.utils.Message;
 import be.miner.utils.Prefix;
 import org.bukkit.*;
 import org.bukkit.block.Block;
@@ -21,7 +22,7 @@ public class BlockEvent implements org.bukkit.event.Listener {
         double z = loc.getZ();
         if (Game.isPaused()) {
             breakEvent.setCancelled(true);
-            player.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("restriction.breakblockpause"));
+            Message.send(player, ChatColor.RED + Main.getLangFile().getString("restriction.breakblockpause"));
             return;
         }
         if (Game.isRunning()) { //is the game is running
@@ -34,7 +35,7 @@ public class BlockEvent implements org.bukkit.event.Listener {
                                 if ((x > base.getNegativeX() && x < base.getPositiveX() && z > base.getNegativeZ() && z < base.getPositiveZ())) {
                                     //block if all of this true
                                     breakEvent.setCancelled(true);
-                                    player.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("restriction.breakblockbase"));
+                                    Message.send(player, ChatColor.RED + Main.getLangFile().getString("restriction.breakblockbase"));
                                     return;
                                 }
                             }
@@ -57,7 +58,7 @@ public class BlockEvent implements org.bukkit.event.Listener {
         double y = loc.getY();
         if (Game.isPaused()) {
             placeEvent.setCancelled(true);
-            player.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("restriction.placeblockpause"));
+            Message.send(player, ChatColor.RED + Main.getLangFile().getString("restriction.placeblockpause"));
             return;
         }
         if (Game.isRunning()) { //is the game is running
@@ -83,7 +84,7 @@ public class BlockEvent implements org.bukkit.event.Listener {
                                 if (!(x > base.getNegativeX() && x < base.getPositiveX() && z > base.getNegativeZ() && z < base.getPositiveZ())) {
                                     //block if all of this true
                                     placeEvent.setCancelled(true);
-                                    player.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("restriction.placeblockbase"));
+                                    Message.send(player, ChatColor.RED + Main.getLangFile().getString("restriction.placeblockbase"));
                                     return;
                                 }
                             }

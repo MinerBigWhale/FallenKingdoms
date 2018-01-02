@@ -1,6 +1,5 @@
 package be.miner.utils;
 
-import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -62,12 +61,12 @@ public class PluginFile extends YamlConfiguration {
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
-                        Console.log("An error occured while filling file " + file.getName());
+                        Message.log("An error occured while filling file " + file.getName());
                     }
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                Console.log("An error occured while creating file " + file.getName());
+                Message.log("An error occured while creating file " + file.getName());
             }
         }
 
@@ -82,12 +81,12 @@ public class PluginFile extends YamlConfiguration {
                     options().copyDefaults(true);
                 } catch (Exception e) {
                     e.printStackTrace();
-                    Console.log("An error occured while reloading file in memory " + file.getName());
+                    Message.log("An error occured while reloading file in memory " + file.getName());
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
-            Console.log("An error occured while reloading file in memory " + file.getName());
+            Message.log("An error occured while reloading file in memory " + file.getName());
         }
     }
 
@@ -98,7 +97,7 @@ public class PluginFile extends YamlConfiguration {
             save(file);
         } catch (Exception e) {
             e.printStackTrace();
-            Console.log("An error occured while saving file " + file.getName());
+            Message.log("An error occured while saving file " + file.getName());
         }
     }
 }

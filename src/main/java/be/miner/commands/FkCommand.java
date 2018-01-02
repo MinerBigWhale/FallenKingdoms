@@ -5,7 +5,7 @@ import be.miner.data.Base;
 import be.miner.data.Game;
 import be.miner.data.Timer;
 import be.miner.gui.MainMenu;
-import be.miner.utils.Console;
+import be.miner.utils.Message;
 import be.miner.utils.Prefix;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -30,23 +30,23 @@ public class FkCommand implements CommandExecutor {
                         if (!Game.isRunning()) {
                             Timer.startFk(_pl);
                         } else {
-                            Console.broadcast( ChatColor.RED + Main.getLangFile().getString("error.alreadystarted"));
+                            Message.broadcast( ChatColor.RED + Main.getLangFile().getString("error.alreadystarted"));
                         }
                     } else {
-                        p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.nopermission"));
+                        Message.send(p, ChatColor.RED + Main.getLangFile().getString("error.nopermission"));
                     }
                 } else {
-                    p.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Usage: /fk start !");
+                    Message.send(p, ChatColor.RED + "Usage: /fk start !");
                 }
             } else if (args[0].equalsIgnoreCase("stop")) {
                 if (args.length == 1) {
                     if (p.hasPermission("fk.stop")) {
                         Timer.stopFk(_pl);
                     } else {
-                        p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.nopermission"));
+                        Message.send(p, ChatColor.RED + Main.getLangFile().getString("error.nopermission"));
                     }
                 } else {
-                    p.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Usage: /fk stop !");
+                    Message.send(p, ChatColor.RED + "Usage: /fk stop !");
                 }
             } else if (args[0].equalsIgnoreCase("limit")) {
                 if (args.length == 1) {
@@ -54,29 +54,29 @@ public class FkCommand implements CommandExecutor {
                         base.border();
                     }
                 } else {
-                    p.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Usage: /fk limit !");
+                    Message.send(p, ChatColor.RED + "Usage: /fk limit !");
                 }
             } else if (args[0].equalsIgnoreCase("open")) {
                 if (args.length == 1) {
                     MainMenu.openMenu(p);
-                    p.sendMessage(Prefix.getPrefix() + ChatColor.GREEN + Main.getLangFile().getString("commandfeedback.menuopening"));
+                    Message.send(p, ChatColor.GREEN + Main.getLangFile().getString("commandfeedback.menuopening"));
                 } else {
-                    p.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Usage: /fk open !");
+                    Message.send(p, ChatColor.RED + "Usage: /fk open !");
                 }
             } else if (args[0].equalsIgnoreCase("pause")) {
                 if (args.length == 1) {
                     if (p.hasPermission("fk.pause")) {
                         Game.pause();
                         if (Game.isPaused()) {
-                            Console.broadcast( ChatColor.GREEN + Main.getLangFile().getString("commandfeedback.pauseon"));
+                            Message.broadcast( ChatColor.GREEN + Main.getLangFile().getString("commandfeedback.pauseon"));
                         } else {
-                            Console.broadcast( ChatColor.YELLOW + Main.getLangFile().getString("commandfeedback.pauseoff"));
+                            Message.broadcast( ChatColor.YELLOW + Main.getLangFile().getString("commandfeedback.pauseoff"));
                         }
                     } else {
-                        p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.nopermission"));
+                        Message.send(p, ChatColor.RED + Main.getLangFile().getString("error.nopermission"));
                     }
                 } else {
-                    p.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Usage: /fk pause !");
+                    Message.send(p, ChatColor.RED + "Usage: /fk pause !");
                 }
             } else if (args[0].equalsIgnoreCase("block")) {
                 if (args.length == 3) {
@@ -87,22 +87,22 @@ public class FkCommand implements CommandExecutor {
                         if (args[1].equalsIgnoreCase("add")) {
                             Game.addBlock(args[2]);
                             if (Game.hasBlock(args[2])) {
-                                p.sendMessage(Prefix.getPrefix() + ChatColor.GREEN + Main.getLangFile().getString("commandfeedback.blockadded"));
+                                Message.send(p, ChatColor.GREEN + Main.getLangFile().getString("commandfeedback.blockadded"));
                             } else {
-                                p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.cannotadd") + args[2]);
+                                Message.send(p, ChatColor.RED + Main.getLangFile().getString("error.cannotadd") + args[2]);
                             }
                         } else if (args[1].equalsIgnoreCase("remove")) {
                             Game.removeBlock(args[2]);
                             if (!Game.hasBlock(args[2])) {
-                                p.sendMessage(Prefix.getPrefix() + ChatColor.GREEN + Main.getLangFile().getString("commandfeedback.blockremoved"));
+                                Message.send(p, ChatColor.GREEN + Main.getLangFile().getString("commandfeedback.blockremoved"));
                             } else {
-                                p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.cannotremove") + args[2]);
+                                Message.send(p, ChatColor.RED + Main.getLangFile().getString("error.cannotremove") + args[2]);
                             }
                         } else {
-                            p.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Usage: /fk block <add/remove> <Block> !");
+                            Message.send(p, ChatColor.RED + "Usage: /fk block <add/remove> <Block> !");
                         }
                     } else {
-                        p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.nopermission"));
+                        Message.send(p, ChatColor.RED + Main.getLangFile().getString("error.nopermission"));
                     }
                 } else if (args.length == 2) {
                     if (p.hasPermission("fk.block")) {
@@ -111,16 +111,16 @@ public class FkCommand implements CommandExecutor {
                             for (Material material : Game.getBlocks()) {
                                 blocks.add(material.toString());
                             }
-                            p.sendMessage(Prefix.getPrefix() + ChatColor.GREEN + "Blocks in the " + ChatColor.GRAY + "blacklist :");
-                            p.sendMessage(Prefix.getPrefix() + ChatColor.YELLOW + "  " + String.join(", ",blocks));
+                            Message.send(p,ChatColor.GREEN + "Blocks in the " + ChatColor.GRAY + "blacklist :");
+                            Message.send(p,ChatColor.YELLOW + "  " + String.join(", ",blocks));
                         } else {
-                            p.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Usage: /fk block list !");
+                            Message.send(p,ChatColor.RED + "Usage: /fk block list !");
                         }
                     } else {
-                        p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.nopermission"));
+                        Message.send(p, ChatColor.RED + Main.getLangFile().getString("error.nopermission"));
                     }
                 } else {
-                    p.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Usage: /fk block <add/remove> <Block> !");
+                    Message.send(p, ChatColor.RED + "Usage: /fk block <add/remove> <Block> !");
                 }
             } else if (args[0].equalsIgnoreCase("player")) {
                 if (p.hasPermission("fk.player")) {
@@ -128,44 +128,44 @@ public class FkCommand implements CommandExecutor {
                         Player player = Bukkit.getPlayer(args[2]);
                         if (args[1].equalsIgnoreCase("add")) {
                             if (player == null) {
-                                p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.playernotconnected"));
+                                Message.send(p, ChatColor.RED + Main.getLangFile().getString("error.playernotconnected"));
                             } else if (args[3].equalsIgnoreCase("Blue") || args[3].equalsIgnoreCase("Red") || args[3].equalsIgnoreCase("Green") || args[3].equalsIgnoreCase("Yellow")) {
                                 if (Game.hasBase(args[3])) {
                                     if (!Game.getBase(args[3]).hasPlayer(player)) {
                                         Game.getBase(args[3]).addPlayer(player);
                                     } else {
-                                        p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.playerisinthisteam"));
+                                        Message.send(p, ChatColor.RED + Main.getLangFile().getString("error.playerisinthisteam"));
                                     }
                                 } else {
-                                    p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.thisisnotabase"));
+                                    Message.send(p, ChatColor.RED + Main.getLangFile().getString("error.thisisnotabase"));
                                 }
                             } else {
-                                p.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Usage: /fk player add <Player> <Blue, Red, Green, Yellow> !");
+                                Message.send(p, ChatColor.RED + "Usage: /fk player add <Player> <Blue, Red, Green, Yellow> !");
                             }
                         } else if (args[1].equalsIgnoreCase("remove")) {
                             if (player == null) {
-                                p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.playernotconnected"));
+                                Message.send(p, ChatColor.RED + Main.getLangFile().getString("error.playernotconnected"));
                             } else if (args[3].equalsIgnoreCase("Blue") || args[3].equalsIgnoreCase("Red") || args[3].equalsIgnoreCase("Green") || args[3].equalsIgnoreCase("Yellow")) {
                                 if (Game.hasBase(args[3])) {
                                     if (Game.getBase(args[3]).hasPlayer(player)) {
                                         Game.getBase(args[3]).removePlayer(player);
                                     } else {
-                                        p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.playernotinthisteam"));
+                                        Message.send(p, ChatColor.RED + Main.getLangFile().getString("error.playernotinthisteam"));
                                     }
                                 } else {
-                                    p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.thisisnotabase"));
+                                    Message.send(p, ChatColor.RED + Main.getLangFile().getString("error.thisisnotabase"));
                                 }
                             } else {
-                                p.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Usage: /fk player remove <Player> <Blue, Red, Green, Yellow> !");
+                                Message.send(p, ChatColor.RED + "Usage: /fk player remove <Player> <Blue, Red, Green, Yellow> !");
                             }
                         } else {
-                            p.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Usage: /fk player <add/remove> <Player> <Blue, Red, Green, Yellow> !");
+                            Message.send(p, ChatColor.RED + "Usage: /fk player <add/remove> <Player> <Blue, Red, Green, Yellow> !");
                         }
                     } else {
-                        p.sendMessage(Prefix.getPrefix() + ChatColor.RED + "Usage: /fk player <add/remove> <Player> <Blue, Red, Green, Yellow> !");
+                        Message.send(p, ChatColor.RED + "Usage: /fk player <add/remove> <Player> <Blue, Red, Green, Yellow> !");
                     }
                 } else {
-                    p.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("error.nopermission"));
+                    Message.send(p, ChatColor.RED + Main.getLangFile().getString("error.nopermission"));
                 }
             }
         } else {

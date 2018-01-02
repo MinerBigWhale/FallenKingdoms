@@ -3,7 +3,7 @@ package be.miner.data;
 
 import be.miner.Main;
 import be.miner.gui.RegionHighlighter;
-import be.miner.utils.Console;
+import be.miner.utils.Message;
 import be.miner.utils.Prefix;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -79,12 +79,12 @@ public class Base {
         _yNegative = _y - _size;
 
         // print Base informations
-        Console.log(ChatColor.GREEN + "Base " + _chatColor + _name + ChatColor.GREEN + " Created");
-        Console.log(ChatColor.YELLOW + "  center location: ");
-        Console.log(ChatColor.YELLOW + "    x: " + ChatColor.WHITE + _x);
-        Console.log(ChatColor.YELLOW + "    y: " + ChatColor.WHITE + _y);
-        Console.log(ChatColor.YELLOW + "    z: " + ChatColor.WHITE + _z);
-        Console.log(ChatColor.YELLOW + "    size: " + ChatColor.WHITE + _size);
+        Message.log(ChatColor.GREEN + "Base " + _chatColor + _name + ChatColor.GREEN + " Created");
+        Message.log(ChatColor.YELLOW + "  center location: ");
+        Message.log(ChatColor.YELLOW + "    x: " + ChatColor.WHITE + _x);
+        Message.log(ChatColor.YELLOW + "    y: " + ChatColor.WHITE + _y);
+        Message.log(ChatColor.YELLOW + "    z: " + ChatColor.WHITE + _z);
+        Message.log(ChatColor.YELLOW + "    size: " + ChatColor.WHITE + _size);
 
         //Setup scoreboard team
         _scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();
@@ -182,7 +182,7 @@ public class Base {
             }
         }
         if (!hasPlayer(player)) {
-            Console.broadcast( ChatColor.GOLD + player.getName() + ChatColor.GREEN + Main.getLangFile().getString("message.playerhasjointeam") + getNameString());
+            Message.broadcast( ChatColor.GOLD + player.getName() + ChatColor.GREEN + Main.getLangFile().getString("message.playerhasjointeam") + getNameString());
         }
         _players.put(player.getName(), player);
         _team.addPlayer(player);
@@ -194,7 +194,7 @@ public class Base {
         if (hasPlayer(player)) {
             _players.remove(player.getName());
             _team.removePlayer(player);
-            Console.broadcast( ChatColor.GOLD + player.getName() + ChatColor.GREEN + Main.getLangFile().getString("message.playerhasleaveteam") + getNameString());
+            Message.broadcast( ChatColor.GOLD + player.getName() + ChatColor.GREEN + Main.getLangFile().getString("message.playerhasleaveteam") + getNameString());
         }
         Timer.getScoreBoard().updateBaseValue().update();
     }

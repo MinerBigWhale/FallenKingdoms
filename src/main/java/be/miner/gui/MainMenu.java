@@ -3,7 +3,6 @@ package be.miner.gui;
 import be.miner.Main;
 import be.miner.data.Base;
 import be.miner.data.Game;
-import be.miner.utils.Console;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

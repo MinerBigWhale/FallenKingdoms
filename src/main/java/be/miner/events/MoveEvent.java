@@ -4,6 +4,7 @@ import be.miner.Main;
 import be.miner.data.Base;
 import be.miner.data.Game;
 import be.miner.data.Timer;
+import be.miner.utils.Message;
 import be.miner.utils.Prefix;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -32,7 +33,7 @@ public class MoveEvent implements Listener {
 
         if (Game.isPaused()) {
             moveEvent.setCancelled(true);
-            player.sendMessage(Prefix.getPrefix() + ChatColor.RED + Main.getLangFile().getString("restriction.movepause"));
+            Message.send(player, ChatColor.RED + Main.getLangFile().getString("restriction.movepause"));
             return;
         }
         for (Base base : Game.getBases()) {

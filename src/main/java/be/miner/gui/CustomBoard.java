@@ -5,8 +5,7 @@ import be.miner.Main;
 import be.miner.data.Base;
 import be.miner.data.Game;
 import be.miner.data.Timer;
-//import be.miner.utils.Console;
-import be.miner.utils.Console;
+//import be.miner.utils.Message;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -139,7 +138,7 @@ public class CustomBoard {
                 }
                 int maxLength = (strings[-scorepos].length() < 16) ? strings[-scorepos].length() : 16;
                 team.setPrefix(strings[-scorepos].substring(0, maxLength));
-                //Console.log(entry + "|" + (team.getPrefix() + "                      ").substring(0, 16) + "|" + scorepos);
+                //Message.log(entry + "|" + (team.getPrefix() + "                      ").substring(0, 16) + "|" + scorepos);
                 objective.getScore(entry).setScore(scorepos);
             }
         } else {
